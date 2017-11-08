@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>javascript基本对象,数据类型,常量,变量 | 喵喵喵？？</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="javascript基本对象,数据类型,常量,变量javascript数据类型 基本数据类型 Number String Boolean Null Undefined   混合数据类型 Object   js中变量是松散类型的，因此有时我们需要检测变量的数据类型 typeof操作符可以检测变量的数据类型（输出的是一个关于数据类型的字符串）  数字(Number) 介绍Number类型包含整数和浮点">
+<meta name="keywords" content="JavaScript,前端基础,动态网页编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript基本对象,数据类型,常量,变量">
+<meta property="og:url" content="http://yoursite.com/2017/10/08/07 01  javascript/index.html">
+<meta property="og:site_name" content="喵喵喵？？">
+<meta property="og:description" content="javascript基本对象,数据类型,常量,变量javascript数据类型 基本数据类型 Number String Boolean Null Undefined   混合数据类型 Object   js中变量是松散类型的，因此有时我们需要检测变量的数据类型 typeof操作符可以检测变量的数据类型（输出的是一个关于数据类型的字符串）  数字(Number) 介绍Number类型包含整数和浮点">
+<meta property="og:updated_time" content="2017-10-26T09:45:07.408Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript基本对象,数据类型,常量,变量">
+<meta name="twitter:description" content="javascript基本对象,数据类型,常量,变量javascript数据类型 基本数据类型 Number String Boolean Null Undefined   混合数据类型 Object   js中变量是松散类型的，因此有时我们需要检测变量的数据类型 typeof操作符可以检测变量的数据类型（输出的是一个关于数据类型的字符串）  数字(Number) 介绍Number类型包含整数和浮点">
+  
+    <link rel="alternative" href="/atom.xml" title="喵喵喵？？" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -60px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/tororo/tororo.model.json",0.5)</script>
+  
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">John Doe</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder=" Search...">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/前端基础/" style="font-size: 10px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 10px;">动态网页编程</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">John Doe</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">John Doe</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-07 01  javascript" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/08/07 01  javascript/" class="article-date">
+      <time datetime="2017-10-08T08:30:16.000Z" itemprop="datePublished">2017-10-08</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javascript基本对象,数据类型,常量,变量
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="javascript基本对象-数据类型-常量-变量"><a href="#javascript基本对象-数据类型-常量-变量" class="headerlink" title="javascript基本对象,数据类型,常量,变量"></a><strong>javascript基本对象,数据类型,常量,变量</strong></h1><h2 id="javascript数据类型"><a href="#javascript数据类型" class="headerlink" title="javascript数据类型"></a><strong>javascript数据类型</strong></h2><ul>
+<li><strong>基本数据类型</strong><ol>
+<li><strong>Number</strong></li>
+<li><strong>String</strong></li>
+<li><strong>Boolean</strong></li>
+<li><strong>Null</strong></li>
+<li><strong>Undefined</strong></li>
+</ol>
+</li>
+<li><strong>混合数据类型</strong><ul>
+<li><strong>Object</strong></li>
+</ul>
+</li>
+<li><strong>js中变量是松散类型的，因此有时我们需要检测变量的数据类型</strong></li>
+<li><strong>typeof操作符可以检测变量的数据类型（输出的是一个关于数据类型的字符串）</strong></li>
+</ul>
+<h3 id="数字-Number"><a href="#数字-Number" class="headerlink" title="数字(Number)"></a><strong>数字(Number)</strong></h3><ul>
+<li><p><strong>介绍Number类型包含整数和浮点数（浮点数数值必须包含一个小数点，且小数点后面至少有一位数字）两种值</strong></p>
+<blockquote>
+<p>例如:<code>var x1=34.00</code>; //使用小数点来写<br><strong><code>var x2=34</code>; //不使用小数点来写</strong></p>
+</blockquote>
+</li>
+<li><p><strong>极大或极小的数字可以通过科学（指数）计数法来书写：</strong></p>
+<blockquote>
+<p>例：<code>var y=123e5; // 12300000</code><br><strong><code>var z=123e-5; // 0.00123</code></strong></p>
+</blockquote>
+</li>
+<li><p><strong>NaN:非数字类型</strong></p>
+<ul>
+<li><strong>特点：涉及到的 任何关于NaN的操作，都会返回NaN</strong></li>
+<li><strong>NaN不等于自身。</strong><blockquote>
+<p>例：<code>var ab = &quot;a1&quot;;</code><br><code>console.log(ab/10);// NaN</code><br><strong><code>console.log(NaN == NaN);// false;</code></strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>###<strong>字符串（string）</strong></p>
+<blockquote>
+<p>例：<code>var carname=&quot;Bill Gates&quot;;</code><br><strong><code>var answer=&quot;He is called &#39;Johnny&#39;&quot;;</code></strong></p>
+</blockquote>
+<ul>
+<li><strong>字符串是存储字符（比如 “Bill Gates”）的变量。</strong></li>
+<li><strong>字符串可以是引号中的任意文本，可以使用单引号或双引号，只要不匹配包围字符串的引号即可</strong></li>
+<li><strong>注： JavaScript对大小写敏感</strong></li>
+</ul>
+<p>###<strong>布尔（boolean）</strong></p>
+<blockquote>
+<p><strong>例：<code>var x=true</code></strong><br><strong><code>var y=false</code></strong></p>
+<ul>
+<li><strong>布尔（逻辑）只能有两个值：<code>true</code> 或 <code>false</code>。</strong></li>
+</ul>
+</blockquote>
+<h3 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a><strong>Undefined</strong></h3><ul>
+<li><strong>Undefined 这个值表示变量不含有值。</strong></li>
+<li><strong>可以通过将变量的值设置为 null 来清空变量</strong></li>
+</ul>
+<h3 id="null"><a href="#null" class="headerlink" title="null"></a><strong>null</strong></h3><ul>
+<li><strong>null类型被看做空对象指针，null类型也是空的对象引用。</strong><br><strong>只有一个值，即null值，所以，在用typeof 操作符去检测</strong><br><strong>null类型的值时，结果是object类型。</strong><br><strong>如果你定义了一个变量，但是想在以后把这个变量当做一</strong><br><strong>个对象来用，那么最好将该对象初始化为null值</strong></li>
+</ul>
+<p>###<strong>对象（object）</strong></p>
+<ul>
+<li><p><strong>对象由花括号分隔。在括号内部，对象的属性以名称和</strong><br><strong>值对的形式 (name : value) 来定义。属性由逗号分隔：</strong></p>
+<blockquote>
+<p>例：var person={<br>firstname : “Bill”,<br>lastname : “Gates“<br><strong>};</strong></p>
+</blockquote>
+</li>
+<li><p><strong>数组为混合数据类型中的一种</strong></p>
+</li>
+</ul>
+<h2 id="常量Constant：不变的值"><a href="#常量Constant：不变的值" class="headerlink" title="常量Constant：不变的值"></a><strong>常量Constant：不变的值</strong></h2><ul>
+<li><p><strong><code>const constantName = value1；</code></strong></p>
+<blockquote>
+<p><strong>常量名首字符为字母或下划线，其后可有数字。 value1为直接量或表达式。</strong></p>
+</blockquote>
+</li>
+<li><p><strong>1个const关键字可定义1个或多个常量。</strong></p>
+</li>
+<li><strong>内置常量：JS中Infinity表无穷大的数值，-indinity表无穷小.NaN表非数值。</strong><blockquote>
+<p>例：const a = 10;<br> alert(a)</p>
+</blockquote>
+</li>
+</ul>
+<p>##<strong>变量</strong></p>
+<ul>
+<li><strong>概念:变量是存取数字、提供存放信息的容器。对于变量，必须明确变量的命名、变量的类型、变量的声明及其变量的作用域。命名规范</strong></li>
+<li><p><strong>变量命名规范:</strong></p>
+<ul>
+<li><strong>变量必须以字母或下划线开头，后可以跟字母、数字、下划线，不能有空格或特殊字符等。</strong></li>
+<li><strong>不用使用Javascript中的关键字作为变量，如var,true,double等。</strong></li>
+<li><strong>在对变量命名时，最好把变量的意义与其代表的意思对应起来，以免发现错误。</strong></li>
+</ul>
+</li>
+<li><p><strong>变量的类型：</strong></p>
+<ul>
+<li><strong>整数变量：x=100;</strong></li>
+<li><strong>字符串变量：y=“125”</strong></li>
+<li><strong>布尔型变量：xy=True</strong></li>
+<li><strong>实型变量：cost=19.5</strong></li>
+</ul>
+</li>
+<li><p><strong>变量的声明</strong></p>
+<ul>
+<li><strong>JavaScript可以在使用前先声明，并可赋值。变量声明用可用命令<code>var</code>;</strong><blockquote>
+<p>例：<code>var mytest;</code><br>该例子定义了一个mytest变量，但没有赋予其值<br><strong>例：var mytest=“This is a book”</strong><br><strong>该例子定义了变量并为其赋予了值。</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>变量的作用域：</strong></p>
+<ul>
+<li><strong>变量分为全局变量和局部变量。</strong><ul>
+<li><strong>全局变量是定义在所有函数体之外，其作用范围是整个函数</strong></li>
+</ul>
+</li>
+<li><strong>局部变量是定义在函数体之内，只对其该函数是可见的，而对其它函数则是不可见的。</strong></li>
+<li><strong>函数体内可以访问父级函数的变量，父级函数不能访问子函数的变量。</strong><br><strong>注：在声明变量时凡是没有var关键字，而直接赋值的变量均为全局变量</strong></li>
+</ul>
+</li>
+</ul>
+<p>##　<strong>JavaScript 的基本对象</strong></p>
+<blockquote>
+<p><strong>对象包括：系统标准类对象 和 自定义对象</strong></p>
+</blockquote>
+<ul>
+<li><strong>标准类对象:</strong><ul>
+<li><strong>字符串对象String、</strong></li>
+<li><strong>日期对象Date、</strong></li>
+<li><strong>数组对象Array、</strong></li>
+<li><strong>数字对象Number 、</strong></li>
+<li><strong>数学对象Math、</strong></li>
+<li><strong>正则表达式对象RegExp</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>*自定义类对象:自定义的包含属性和方法的对象</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">例：<span class="keyword">var</span> person=&#123;</div><div class="line">firstname : <span class="string">"Bill"</span>,</div><div class="line">lastname : <span class="string">"Gates"</span>,</div><div class="line">eat : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2017/10/08/07 01  javascript/">javascript基本对象,数据类型,常量,变量</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 John Doe 的个人博客">John Doe</a></p>
+        <p><span>发布时间:</span>2017年10月08日 - 16时30分</p>
+        <p><span>最后更新:</span>2017年10月26日 - 17时45分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/10/08/07 01  javascript/" title="javascript基本对象,数据类型,常量,变量">http://yoursite.com/2017/10/08/07 01  javascript/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/10/08/07 01  javascript/　　作者: John Doe" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a  href="/2017/10/09/javascript 基础/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          JavaScript基础
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#javascript基本对象-数据类型-常量-变量"><span class="toc-number">1.</span> <span class="toc-text">javascript基本对象,数据类型,常量,变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#javascript数据类型"><span class="toc-number">1.1.</span> <span class="toc-text">javascript数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数字-Number"><span class="toc-number">1.1.1.</span> <span class="toc-text">数字(Number)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Undefined"><span class="toc-number">1.1.2.</span> <span class="toc-text">Undefined</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">1.1.3.</span> <span class="toc-text">null</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常量Constant：不变的值"><span class="toc-number">1.2.</span> <span class="toc-text">常量Constant：不变的值</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'cyti2OL1Q',
+      conf: '6c331b74ab254f7bf316e9024184c5dc'
+    });
+  </script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/2017/10/09/javascript 基础/" title="上一篇: JavaScript基础">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/10/23/Ajax 常问问题/">Ajax 常问问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/22/ajax 总结/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/21/AJAX概念及form提交/">AJAX概念及form提交</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/20/jQuery 中的遍历/">jQuery 中的遍历</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/19/JQuery 基础二/">JQuery 基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/18/Math 对象/">Math 对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/17/JS字符串操作/">JS字符串操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/16/JS 对象 类,定时器/">JS函数,对象/类,定时器</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/15/javascript 数组/">javascript 数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/15/数组方法/">数组方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/14/javascript  运算/">JS赋值 运算比较 流程控制</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/13/window对象的事件/">window对象的事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/12/DOM节点查找  事件/">DOM节点查找</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/12/DOM对象/">DOM</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/11/BOM 对象/">Window对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/10/java script 数据类型/">javascript 数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/09/javascript 基础/">JavaScript基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/08/07 01  javascript/">javascript基本对象,数据类型,常量,变量</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 4;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

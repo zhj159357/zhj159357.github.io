@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>喵喵喵？？</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="喵喵喵？？">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="喵喵喵？？">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="喵喵喵？？">
+  
+    <link rel="alternative" href="/atom.xml" title="喵喵喵？？" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -60px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/tororo/tororo.model.json",0.5)</script>
+  
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">John Doe</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder=" Search...">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/前端基础/" style="font-size: 10px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 10px;">动态网页编程</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">John Doe</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">John Doe</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-javascript  运算" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/14/javascript  运算/" class="article-date">
+      <time datetime="2017-10-14T13:26:57.000Z" itemprop="datePublished">2017-10-14</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/14/javascript  运算/">JS赋值 运算比较 流程控制</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="JS赋值-运算比较-流程控制"><a href="#JS赋值-运算比较-流程控制" class="headerlink" title="JS赋值 运算比较 流程控制"></a><strong>JS赋值 运算比较 流程控制</strong></h1><h2 id="变量的声明与赋值"><a href="#变量的声明与赋值" class="headerlink" title="变量的声明与赋值"></a><strong>变量的声明与赋值</strong></h2><ul>
+<li><p><strong>先声明变量再赋值</strong></p>
+<blockquote>
+<p><strong><code>var width</code>      <code>width=5</code></strong><br><strong><code>var</code> － 用于声明变量的关键字</strong><br><strong><code>width</code> － 变量名</strong></p>
+</blockquote>
+</li>
+<li><p><strong>同时声明和赋值变量</strong></p>
+<blockquote>
+<p><code>var catName= “ 皮皮”; var x, y, z = 10;</code> </p>
+</blockquote>
+</li>
+<li><p><strong>不声明直接赋值</strong></p>
+<blockquote>
+<p><strong><code>width=5</code></strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="JS运算"><a href="#JS运算" class="headerlink" title="JS运算"></a><strong>JS运算</strong></h2><h3 id="运算符号"><a href="#运算符号" class="headerlink" title="运算符号"></a><strong>运算符号</strong></h3><ul>
+<li><strong>算数运算符(+,-,*,/,%,++,–)</strong></li>
+<li><strong>赋值运算符(=,+=,-=,*=,/=,%=)</strong></li>
+<li><strong>字符串连接符(+)</strong></li>
+<li><strong>优先级:</strong><blockquote>
+<p><strong>优先级：（）&gt;算术运算符（先乘除后加减）&gt;赋值运算符</strong></p>
+<h2 id="JS比较"><a href="#JS比较" class="headerlink" title="JS比较"></a><strong>JS比较</strong></h2><h3 id="比较符号"><a href="#比较符号" class="headerlink" title="比较符号"></a><strong>比较符号</strong></h3></blockquote>
+</li>
+<li><strong>比较运算符(&gt;,&lt;,&gt;=,&lt;=,==,===,!=,!==)</strong></li>
+<li><strong>逻辑运算符(&amp;&amp;,||,!)</strong></li>
+<li><p><strong>三目运算符:</strong></p>
+<blockquote>
+<p> <strong>条件?语句1:语句2</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="JS-流程控制"><a href="#JS-流程控制" class="headerlink" title="JS 流程控制"></a><strong>JS 流程控制</strong></h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介:"></a><strong>简介:</strong></h3><blockquote>
+<p><strong>所谓的“流程”就是程序代码执行的顺序。在任何一种语言中，程序控制是必需的。它能使整个程序减少混乱，使之顺利按照其一定的方式执行。 JavaScript常用的控制流程有3种基本结构：顺序结构、选择结构、循环结构顺序结构,正常情况下，程序中的语句是按照书写顺序执行的，这种结构成为顺序结构。前面所例举的程序都是顺序结构的程序。</strong></p>
+</blockquote>
+<h3 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a><strong>选择结构</strong></h3><blockquote>
+<p><strong>选择结构主要用判断语句来实现根据一定的条件决定进一步执行那些语句。 JavaScript提供了两种类型的选择结果语句，也成为判断语句：<code>if语句</code>和<code>switch语句</code>。一般来讲if语句用于从两条执行路线中选择其一执行,而switch语句用于从多条执行路线中选择其一执行。</strong></p>
+</blockquote>
+<ul>
+<li><p><strong>if语句</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(条件)&#123;</div><div class="line"><span class="comment">//JavaScript代码;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>If条件语句</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(条件)&#123;</div><div class="line"><span class="comment">//JavaScript代码;</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line"><span class="comment">//JavaScript代码;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>If…else if…else语句</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (条件 <span class="number">1</span>)</div><div class="line">&#123;</div><div class="line">当条件 <span class="number">1</span> 为 <span class="literal">true</span> 时执行的代码</div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span> <span class="keyword">if</span> (条件 <span class="number">2</span>)</div><div class="line">&#123;</div><div class="line">当条件 <span class="number">2</span> 为 <span class="literal">true</span> 时执行的代码</div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123;</div><div class="line">当条件 <span class="number">1</span> 和 条件 <span class="number">2</span> 都不为 <span class="literal">true</span> 时执行的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>switch语句</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span>(n)</div><div class="line">&#123; <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">执行代码块 <span class="number">1</span></div><div class="line"><span class="keyword">break</span>;</div><div class="line"><span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">执行代码块 <span class="number">2</span></div><div class="line"><span class="keyword">break</span>;</div><div class="line"><span class="keyword">default</span>:</div><div class="line">n 与 <span class="keyword">case</span> <span class="number">1</span> 和 <span class="keyword">case</span> <span class="number">2</span> 不同时执行的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a><strong>循环结构</strong></h3><blockquote>
+<p><strong>前面介绍的if语句和switch语句，都属于条件判断语句。即在条件为真的情况下每行脚本只有一次执行的机会。对于实际情况中，需要根据条件或计数器来重复执行多行程序代码的能力，利用循环语句来实现。</strong><br><strong>在JavaScript中有两种主要类型的循环语句，<code>for循</code></strong><br><strong>环和<code>while循环</code></strong></p>
+</blockquote>
+<ul>
+<li><p><strong>for 循环</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (语句 <span class="number">1</span>; 语句 <span class="number">2</span>; 语句 <span class="number">3</span>)</div><div class="line">&#123;</div><div class="line">被执行的代码块</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>语句 1 在循环（代码块）开始前执行</strong></li>
+<li><strong>语句 2 定义运行循环（代码块）的条件</strong><ul>
+<li><strong>语句 3 在循环（代码块）已被执行之后执行</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>While 语句</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (条件)</div><div class="line">&#123;</div><div class="line">需要执行的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Do…While语句</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">do</span></div><div class="line">&#123;</div><div class="line">需要执行的代码</div><div class="line">&#125;</div><div class="line"><span class="keyword">while</span> (条件);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p><strong>在循环语句中，只有当循环条件表达式值为false时，循环语句才能结束，为了给for和while循环加入更多的使用程序，JavaScript包含有<code>break</code>和<code>continue语句</code>。这两个语句可用于改变循环的流程。</strong></p>
+<ul>
+<li><strong>Break语句 中断循环</strong></li>
+<li><strong>Continue语句 开始下一次循环</strong></li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-window对象的事件" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/13/window对象的事件/" class="article-date">
+      <time datetime="2017-10-13T13:26:57.000Z" itemprop="datePublished">2017-10-13</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/13/window对象的事件/">window对象的事件</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="window对象的事件"><a href="#window对象的事件" class="headerlink" title="window对象的事件"></a>window对象的事件</h1><ul>
+<li><p>onscroll 当浏览器滚动的时候触发</p>
+</li>
+<li><p>onresize 当浏览器窗口改变大小时触发</p>
+</li>
+<li><p>鼠标的滚轮事件：</p>
+<ul>
+<li><p>注册滚轮事件的兼容写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">if(document.addEventListener)&#123;//firefox</div><div class="line">	&quot;DOMMousescro&quot;,&quot;fn&quot;,false</div><div class="line">	&#125;</div><div class="line"> window.onmousewheel = document.onmousewheel = scrollFunc; //ie和谷歌</div></pre></td></tr></table></figure>
+</li>
+<li><p>判断滚轮方向</p>
+<ul>
+<li>e.wheelDelta //ie和谷歌</li>
+<li>e.delta //火狐</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><ul>
+<li><p>概念：</p>
+<blockquote>
+<p>“Cookie” 是小量信息，某些 Web 站点在您的硬盘上用很小的文本文件存储的信息，下次访问该站点时，可从浏览器读回此信息。</p>
+</blockquote>
+</li>
+<li><p>作用：保存数据到客户端浏览器 。可用于：保存用户登录状态、跟踪用户行为（如保存地区）、定制页面样式、创建购物车</p>
+</li>
+<li><p>限制：每个域最多保存50个cookie，单个cookie大小不能超<br>过4k</p>
+</li>
+<li><p>储存方式：document.cookie = ‘ 名字＝值; expires=过期时间’;</p>
+<ul>
+<li>在cookie的名或值中不能使用分号（;）、逗号（,）、等号（=）以及空格，所以存储时需用escape()函数进行编码，它能将一些特殊符号使用十六进制表示，取用时再用unescape反编码</li>
+<li>过期时间是以GMT格式表示的时间字符串，超过这个时间，cookie将消失，过期时间设置为：当前时间+过期天数<em>24</em>3600*1000</li>
+</ul>
+</li>
+</ul>
+<h1 id="历史记录"><a href="#历史记录" class="headerlink" title="历史记录"></a>历史记录</h1><blockquote>
+<p>当浏览器的URL发送改变时，浏览器会记录相应的地址记录以生成历史记录，让浏览器可以前进后退，同时 window 的history对象提供了相应的操作方法。</p>
+</blockquote>
+<ul>
+<li>back() 退一步，类似在浏览器的工具栏上点击返回按钮</li>
+<li>forward() 前进一步，类似在浏览器中点击前进按钮</li>
+<li>go() 跳转到相应页，当前页面位置索引值为0，上一页就是-1，下一页为1</li>
+</ul>
+<h1 id="iframe操作"><a href="#iframe操作" class="headerlink" title="iframe操作"></a>iframe操作</h1><ul>
+<li>操作子页面<br>document.getElementById(‘iframe的ID’).contentWindow.document.getElementById(‘ 元素的ID’)</li>
+</ul>
+<ul>
+<li>操作父页面<br>window.parent.document.getElementById(‘ 元素的ID’)</li>
+<li>操作顶级页面<br>window.top.document.getElementById(‘ 元素的ID’)</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-DOM节点查找  事件" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/12/DOM节点查找  事件/" class="article-date">
+      <time datetime="2017-10-12T13:30:16.000Z" itemprop="datePublished">2017-10-12</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/12/DOM节点查找  事件/">DOM节点查找</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="DOM节点查找"><a href="#DOM节点查找" class="headerlink" title="DOM节点查找"></a>DOM节点查找</h1><table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>children</td>
+<td>子节点，不包含空节点</td>
+</tr>
+<tr>
+<td>childNodes</td>
+<td>子节点，包含空节点</td>
+</tr>
+<tr>
+<td>firstChild</td>
+<td>第一个子节点，包含空节点</td>
+</tr>
+<tr>
+<td>firstElementChild</td>
+<td>第一个子节点，不包含空节点</td>
+</tr>
+<tr>
+<td>lastChild</td>
+<td>最后一个子节点，包含空节点</td>
+</tr>
+<tr>
+<td>lastElementChild</td>
+<td>最后一个子节点，不包含空节点</td>
+</tr>
+<tr>
+<td>nextSibling</td>
+<td>下一个兄弟节点，包含空节点</td>
+</tr>
+<tr>
+<td>nextElementSibling</td>
+<td>下一个兄弟节点，不包含空节点</td>
+</tr>
+<tr>
+<td>previousSibling</td>
+<td>前一个兄弟节点，包含空节点</td>
+</tr>
+<tr>
+<td>previousElementSibling</td>
+<td>前一个兄弟节点，不包含空节点</td>
+</tr>
+<tr>
+<td>parentNode</td>
+<td>父节点</td>
+</tr>
+<tr>
+<td>offsetParent</td>
+<td>第一个有定位属性的父节点，如果没有，则返回body</td>
+</tr>
+</tbody>
+</table>
+<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><ul>
+<li><p>onload 图片或页面加载完成</p>
+</li>
+<li><p>焦点事件:onfocus/onblur 获得焦点/失去焦点</p>
+</li>
+<li><p>onchange 表单内容发送改变</p>
+</li>
+<li><p>onclick 点击</p>
+</li>
+<li><p>ondblclick 点击两次</p>
+</li>
+<li><p>onkeydown 键盘按下</p>
+</li>
+<li><p>onkeyup 键盘抬起</p>
+</li>
+<li><p>​</p>
+</li>
+<li><p>获取对象 、 兼容处理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> document.onkeydown = function(ev)&#123;</div><div class="line">var ev = ev || window.event;</div><div class="line">//获取事件对象兼容处理，一般浏览器直接在function参</div><div class="line">//数ev获取,ie浏览器通过window.event获取</div><div class="line">document.write(ev.keyCode);&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>键盘event对象属性 keyCode</p>
+</li>
+<li><p>onmousedown 鼠标按下</p>
+</li>
+<li><p>onmouseup 鼠标抬起</p>
+</li>
+<li><p>onmousemove 鼠标移动</p>
+</li>
+<li><p>onmouseover 移到对象上</p>
+</li>
+<li><p>onmouseout 鼠标离开</p>
+</li>
+<li><p>鼠标event对象属性 clientX clientY</p>
+</li>
+<li><p>onselect 在文本框中的文本被选中时发生,支持<code>&lt;input type=&quot;text&quot;&gt;</code>, <code>&lt;textarea&gt;</code></p>
+</li>
+<li><p>onsubmit 在表单中的提交按钮被点击时触发</p>
+</li>
+<li><p>onreset 在表单中的重置按钮被点击时触发</p>
+</li>
+<li><p>onerror 在文档或图像加载过程中发生错误时被触发</p>
+</li>
+<li><p>阻止默认事件<code>preventDefault() 或者 return false；</code></p>
+</li>
+</ul>
+<h1 id="事件的触发机制"><a href="#事件的触发机制" class="headerlink" title="事件的触发机制"></a>事件的触发机制</h1><p>事件的触发机制</p>
+<blockquote>
+<p>上一级标签开始往下查找，直到捕获到事件目标(target)。</p>
+</blockquote>
+<p>事件冒泡阶段：</p>
+<blockquote>
+<p>事件从事件目标(target)开始，往上冒泡直到页面的最上一级标签。</p>
+</blockquote>
+<h1 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h1><p>冒泡详解：</p>
+<blockquote>
+<p>如果此对象定义了此事件的处理程序，那么此事件就会调用这个处理程序，如果没有定义此事件处理程序或者事件返回true，那么这个事件会向这个对象的父级对象传播,不是所有的事件都能冒泡。 blur、 focus、 load和unload不能像其它事件一样冒泡。</p>
+</blockquote>
+<p>阻止冒泡</p>
+<blockquote>
+<p>IE中使用cancelBubble=true，Firefox中使用stopPropagation()</p>
+</blockquote>
+<p><a href="http://www.birdshome.top/images/20131028160201571.jpg" target="_blank" rel="external"><img src="http://www.birdshome.top/images/20131028160201571.jpg" alt="冒泡事件"></a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-DOM对象" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/12/DOM对象/" class="article-date">
+      <time datetime="2017-10-12T13:30:16.000Z" itemprop="datePublished">2017-10-12</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/12/DOM对象/">DOM</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><ul>
+<li>分析DOM节点<code>&lt;html&gt;&lt;head&gt;&lt;title&gt;DOM 教程&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;DOM 第一节&lt;/h1&gt; 、&lt;p&gt;Hello world!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></li>
+</ul>
+<blockquote>
+<p>分析父、子和同胞节点：·<code>&lt;html&gt;</code> 节点没有父节点，它是根节点</p>
+<p><code>&lt;head&gt;</code> 和 <code>&lt;body&gt;</code> 的父节点是<code>&lt;html&gt;</code> 节点 ；文本节点 “ Hello world!”的父节点是 <code>&lt;p&gt;</code> 节点</p>
+</blockquote>
+<ul>
+<li><p>获取节点</p>
+<ul>
+<li>由id获取</li>
+</ul>
+</li>
+</ul>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getElementById</div></pre></td></tr></table></figure>
+
+- 语法：`node.getElementById(&quot;id&quot;);`
+- 例: `document.getElementById(&quot;intro&quot;);`
+</code></pre><ul>
+<li>由class获取</li>
+</ul>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getElementsByClassName</div></pre></td></tr></table></figure>
+
+- 语法：`node. getElementsByClassName(&quot;class&quot;);`
+- 例：`document. getElementsByClassName(&quot; class &quot;);`
+</code></pre><ul>
+<li>由标签名获取</li>
+</ul>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getElementsByTagName</div></pre></td></tr></table></figure>
+
+- 语法：`node. getElementsByTagName(“h1 &quot;);`
+</code></pre><ul>
+<li><p>查看节点类型</p>
+<ul>
+<li><p>语法：</p>
+<blockquote>
+<p><code>nodeObject.[nodeType][nodeName ][nodeValue ]</code></p>
+</blockquote>
+</li>
+<li><p>nodeType 返回以数字值返回指定节点的节点类型。如果节点是元素节点，则返回 1。如果节点是属性节点，则返回 2。</p>
+</li>
+<li><p>nodeName 返回节点名称（大写的标签名）</p>
+</li>
+<li><p>nodeValue 文本节点返回文本内容，其他节点返回null</p>
+</li>
+</ul>
+</li>
+<li><p>DOM属性获取与设置</p>
+<ul>
+<li>获取方法：<ul>
+<li>element[attributename]</li>
+<li>element . attributename</li>
+<li>getAttribute( attributename )</li>
+</ul>
+</li>
+<li>设置属性：<ul>
+<li>setAttribute( attributename, attri</li>
+</ul>
+</li>
+<li>删除属性：<ul>
+<li>removeAttribute( attributename)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>常用属性：</p>
+<ul>
+<li>className 类名</li>
+<li>offsetWidth 宽</li>
+<li>offsetHeight 高</li>
+<li>offsetLeft,offsetTop获取距离第一个定位父节点左上角的距离</li>
+</ul>
+</li>
+<li><p>操作子节点<br>创建节点 createElement( )<br>子节点的增删改</p>
+<ul>
+<li>appendChild 在DOM子集最后添加子节点</li>
+<li>insertBefore 在指定的已有子节点之前插入新的子节点</li>
+<li>removeChild 删除一个节点</li>
+<li>replaceChild 替换节点</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-BOM 对象" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/11/BOM 对象/" class="article-date">
+      <time datetime="2017-10-11T13:30:16.000Z" itemprop="datePublished">2017-10-11</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/11/BOM 对象/">Window对象</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Window-对象"><a href="#Window-对象" class="headerlink" title="Window 对象"></a><strong>Window 对象</strong></h1><p><strong>##概念：</strong></p>
+<blockquote>
+<p><strong>Window 对象表示浏览器中打开的窗口。如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象</strong></p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a><strong>属性</strong></h2><ul>
+<li><strong>innerHeight 返回窗口的文档显示区的高度</strong></li>
+<li><strong>innerWidth 返回窗口的文档显示区的宽度</strong></li>
+<li><strong>outerHeight 返回窗口的外部高度 包括滚动条、地址栏、收藏栏等</strong></li>
+<li><strong>outerwidth 返回窗口的外部宽度</strong></li>
+<li><strong>length 设置或返回窗口中的框架数量</strong></li>
+<li><strong>name 设置或返回窗口的名称。</strong><ul>
+<li><strong>window.open() 打开的新网页，第二个参数就是此网页的name。</strong></li>
+<li><strong>iframe里面，name属性就是window的name</strong></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a><strong>方法</strong></h2><ul>
+<li><strong>close() 关闭浏览器窗口</strong></li>
+<li><strong>alert() 显示带有一段消息和一个确认按钮的警告框</strong></li>
+<li><strong>confirm() 显示带有一段消息以及确认按钮和取消按钮的对话框</strong></li>
+<li><strong>prompt()显示可提示用户输入的对话框</strong></li>
+<li><strong>open() 打开一个新的浏览器窗口或查找一个已命名的窗口</strong></li>
+<li><strong>resizeBy() 按照指定的像素调整窗口的大小</strong></li>
+<li><strong>resizeTo() 把窗口的大小调整到指定的宽度和高度</strong></li>
+<li><strong>scrollBy() 按照指定的像素值来滚动内容</strong></li>
+<li><strong>scrollTo() 把内容滚动到指定的坐标</strong></li>
+</ul>
+<h1 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a><strong>navigator对象</strong></h1><blockquote>
+<p><strong>navigator对象通常用于检测浏览器不操作系统的版本</strong></p>
+<p><strong>##属性：</strong></p>
+<ul>
+<li><strong>appCodeName返回浏览器的代码名</strong></li>
+<li><strong>appVersion返回浏览器的次级版本</strong></li>
+<li><strong>appName返回浏览器的名称</strong></li>
+<li><strong>language返回当前浏览器的语言</strong></li>
+<li><strong>platform 返回运行浏览器的操作系统平台</strong></li>
+</ul>
+</blockquote>
+<h1 id="document对象"><a href="#document对象" class="headerlink" title="document对象"></a><strong>document对象</strong></h1><blockquote>
+<p><strong>document 对象是 Window 对象的一部分，包含整个htmlDOM,可通过 window.document 属性对其进行访问,也可以用document直接访问</strong></p>
+</blockquote>
+<p><strong>##属性:</strong></p>
+<ul>
+<li><strong>document.cookie 获取或设置cookie</strong></li>
+<li><strong>document.title 获取或设置title</strong></li>
+<li><strong>document.URL 获取或设置URL</strong></li>
+</ul>
+<h2 id="window下的其他对象"><a href="#window下的其他对象" class="headerlink" title="window下的其他对象"></a><strong>window下的其他对象</strong></h2><blockquote>
+<p><strong>screen 对象包含有关客户端显示屏幕的信息</strong></p>
+</blockquote>
+<h3 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a><strong>属性</strong></h3><ul>
+<li><strong>height 返回显示屏幕的高度； width返回显示器屏幕的宽度</strong></li>
+<li><strong>availHeight 返回显示屏幕的高度 (除 Windows 任务栏之外)</strong></li>
+<li><strong>availWidth 返回显示屏幕的宽度 (除 Windows 任务栏之外)</strong></li>
+<li><strong>colorDepth 返回目标设备或缓冲器上的调色板的比特深度</strong></li>
+<li><strong>pixelDepth 返回显示屏幕的颜色分辨率（比特每像素）</strong></li>
+</ul>
+<h2 id="Body对象"><a href="#Body对象" class="headerlink" title="Body对象"></a><strong>Body对象</strong></h2><h3 id="属性-2"><a href="#属性-2" class="headerlink" title="属性"></a><strong>属性</strong></h3><ul>
+<li><strong>clientWidth网页可见区域宽</strong></li>
+<li><strong>clientHeight网页可见区域高</strong></li>
+<li><strong>scrollWidth网页正文全文宽</strong></li>
+<li><strong>scrollHeight网页正文全文高</strong></li>
+<li><strong>scrollTop网页被卷去的高</strong></li>
+<li><strong>scrollLeft网页被卷去的左</strong></li>
+</ul>
+<p><strong>##Location 对象</strong></p>
+<blockquote>
+<p><strong>Location 对象对象包含有关当前 URL 的信息</strong></p>
+<h3 id="属性-3"><a href="#属性-3" class="headerlink" title="属性"></a><strong>属性</strong></h3><ul>
+<li><strong>hash设置或返回从井号 (#) 开始的 URL（锚）</strong></li>
+<li><strong>host设置或返回主机名和当前 URL 的端口号</strong></li>
+<li><strong>hostname设置或返回当前 URL 的主机名</strong></li>
+<li><strong>href设置或返回完整的 URL</strong></li>
+<li><strong>pathname设置或返回当前 URL 的路径部分</strong></li>
+<li><strong>port设置或返回当前 URL 的端口号</strong></li>
+<li><strong>protocol设置或返回当前 URL 的协议</strong></li>
+<li><strong>search设置或返回从问号 (?) 开始的 URL（查询部分）</strong></li>
+</ul>
+</blockquote>
+<p><strong>###方法</strong></p>
+<ul>
+<li><strong>assign() 加载新的文档</strong></li>
+<li><strong>reload() 重新加载当前文档</strong></li>
+<li><strong>replace() 用新的文档替换当前文档</strong></li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-java script 数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/10/java script 数据类型/" class="article-date">
+      <time datetime="2017-10-10T13:30:16.000Z" itemprop="datePublished">2017-10-10</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/10/java script 数据类型/">javascript 数据类型</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">   javascript 数据类型</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">			<span class="comment">//数字类型</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> num=<span class="number">3</span>;</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="keyword">typeof</span> num);</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="keyword">typeof</span>(<span class="keyword">typeof</span> num) );</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(num/<span class="string">"a"</span>);</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="keyword">typeof</span>(num/<span class="string">"a"</span>));</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> str=<span class="string">"54sdwe5421ds"</span>;</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="keyword">typeof</span> str)</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="string">"aaaaaaaa"</span>)</span></div><div class="line"><span class="javascript">			 <span class="comment">// console.log(aaaaa) // 变量名  未定义    变量 ，先声明 后使用</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="comment">//布尔值</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> bool=<span class="literal">true</span>;</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="keyword">typeof</span> bool);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			/*</span></div><div class="line"><span class="undefined">			 * </span></div><div class="line"><span class="undefined">			 * </span></div><div class="line"><span class="undefined">			 * </span></div><div class="line"><span class="undefined">			 * </span></div><div class="line"><span class="undefined">			 * </span></div><div class="line"><span class="javascript">			 * 在js中，  <span class="number">0</span>代表 falase，  <span class="number">1</span>代表 <span class="literal">true</span></span></div><div class="line"><span class="undefined">			 */</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> unde;</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(unde);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			unde=<span class="literal">null</span>;</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(unde)</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> nu=<span class="literal">null</span>;</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log( <span class="keyword">typeof</span> nu)</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> a;</span></div><div class="line"><span class="undefined">			a=1;</span></div><div class="line"><span class="javascript">			a=<span class="string">"b"</span>;</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> b;</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> obj=&#123;</span></div><div class="line"><span class="javascript">				<span class="string">"name"</span>:<span class="string">"李四"</span>,</span></div><div class="line"><span class="javascript">				<span class="string">"age"</span>:<span class="number">18</span>,</span></div><div class="line"><span class="javascript">				<span class="string">"sex"</span>:<span class="literal">NaN</span>,</span></div><div class="line"><span class="javascript">				<span class="comment">// 键值对</span></span></div><div class="line"><span class="undefined">			&#125;</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(  <span class="keyword">typeof</span>   obj)</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">const</span> a11=<span class="number">5</span>;</span></div><div class="line"><span class="undefined">		</span></div><div class="line"><span class="undefined">	</span></div><div class="line"><span class="undefined">		</span></div><div class="line"><span class="javascript">		<span class="built_in">console</span>.log(a11);</span></div><div class="line"><span class="undefined">						</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> b;</span></div><div class="line"><span class="undefined">		</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> c;</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> d;</span></div><div class="line"><span class="javascript">			<span class="comment">//console.log	(a);  //  报错;</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			 b=5;</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(b);   <span class="comment">//  5   </span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			 </span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(c);   <span class="comment">//undefined</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(d);  <span class="comment">// undefined</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			 d=5;  </span></div><div class="line"><span class="javascript">			 <span class="built_in">console</span>.log(d);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="comment">//  声明变量提升机制</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">变量的查找机制</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">		<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> a=<span class="string">"我是全局中的a"</span>;</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="undefined">				</span></div><div class="line"><span class="undefined">				</span></div><div class="line"><span class="javascript">				<span class="built_in">console</span>.log(a);  <span class="comment">//   </span></span></div><div class="line"><span class="undefined">				</span></div><div class="line"><span class="javascript">				<span class="keyword">var</span> a=<span class="string">"我是局部中的a"</span>;</span></div><div class="line"><span class="undefined">				</span></div><div class="line"><span class="undefined">				</span></div><div class="line"><span class="javascript">				<span class="built_in">console</span>.log(a);   <span class="comment">//  </span></span></div><div class="line"><span class="undefined">				</span></div><div class="line"><span class="undefined">			&#125;</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			fn();</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(a);     </span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">		</div><div class="line">作用域</div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> a=<span class="number">5</span>;</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">				<span class="keyword">var</span> b=<span class="string">"我是fn中的b"</span>;</span></div><div class="line"><span class="javascript">				<span class="built_in">console</span>.log(<span class="string">"当前作用域没有a,全局作用域中有啊"</span>+a);</span></div><div class="line"><span class="undefined">			&#125;</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			fn();</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(b);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-javascript 基础" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/09/javascript 基础/" class="article-date">
+      <time datetime="2017-10-09T08:26:57.000Z" itemprop="datePublished">2017-10-09</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/09/javascript 基础/">JavaScript基础</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="javascript基础"><a href="#javascript基础" class="headerlink" title="javascript基础"></a><strong>javascript基础</strong></h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h2><ul>
+<li><strong>轻量级、直译式客户端脚本语言。</strong></li>
+<li><strong>可被所有浏览器执行，实现网页的劢态功能。</strong></li>
+<li><strong>揑入 HTML 页面后，可由所有的现代浏览器执行</strong><h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a><strong>应用场景</strong></h2></li>
+<li><strong>操作页面元素，动态改变页面内容动态改变表格内容</strong></li>
+<li><strong>编写页面动态效果轮播图层的切换 和 树形菜单等</strong></li>
+<li><strong>数据的客户端验证－减轻服务器端压力注册表单验证</strong></li>
+<li><strong>通过ajax和后端语言实现数据交互</strong></li>
+</ul>
+<h2 id="组成"><a href="#组成" class="headerlink" title="组成:"></a><strong>组成:</strong></h2><ol>
+<li><strong>ECMAScript</strong></li>
+<li><strong>BOM</strong></li>
+<li><strong>DOM</strong></li>
+</ol>
+<h2 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a><strong>ECMAScript</strong></h2><ul>
+<li><strong>概念：JavaScript的核心，描述了语言的基本语法和数据类</strong><br><strong>型，ECMAScript是一套标准，定义了一种语言（比如JS）</strong><br><strong>是什么样子。</strong></li>
+<li><strong>编码遵循ECMAScript标准</strong></li>
+</ul>
+<h2 id="BOM-浏览器对象模型"><a href="#BOM-浏览器对象模型" class="headerlink" title="BOM(浏览器对象模型)"></a><strong>BOM(浏览器对象模型)</strong></h2><ul>
+<li><strong>概念:BOM是用于描述这种对象不对象之间层次关系的模型，浏览器对象模型提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。 BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象，其他对象都是该对象的子对象。</strong></li>
+</ul>
+<h3 id="DOM-文档对象模型"><a href="#DOM-文档对象模型" class="headerlink" title="DOM(文档对象模型)"></a>DOM(文档对象模型)</h3><ul>
+<li><strong>概念:W3C组织推荐的处理可扩展置标语言的标准编程接口。 DOM是以面向对象方式描述的文档模型。 DOM定义了表示和修改文档所需的对象、这些对象的行为和属性以及这些对象乊间的关系。可以把DOM认为是页面上数据和结构的一个树形表示，不过页面当然可能并不是以这种树的方式具体实现。</strong></li>
+</ul>
+<p>##<strong>javascript 使用方法</strong></p>
+<ul>
+<li><p><strong>html内嵌javascript代码</strong></p>
+<blockquote>
+<p><strong><code>&lt;script type=&quot;text/javascript&quot;&gt; //JavaScript 语句&lt;/script &gt;</code></strong></p>
+</blockquote>
+</li>
+<li><p><strong>外部JS文件</strong></p>
+<blockquote>
+<p><strong><code>&lt;script src=&quot;hello.js&quot; language=&quot;javascript&quot;&gt;&lt;/script&gt;</code></strong></p>
+</blockquote>
+</li>
+<li><p><strong>行内编写方式</strong></p>
+<blockquote>
+<p><strong><code>&lt;input name=&quot;btn&quot; type=&quot;button&quot; value=&quot;弹出消息框&quot;onclick=&quot;javascript:alert(&#39;欢迎你&#39;);&quot;/&gt;</code></strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a><strong>事件监听</strong></h2><ul>
+<li><strong>onload事件:是在页面或图片加载完成后立即执行的事件获取元素</strong></li>
+<li><strong>getElementById()：获取指定 ID 的第一个对象引用</strong></li>
+<li><strong>getElementsByName()：通过NAME属性获Document中指定名称对象的集合</strong></li>
+<li><strong>getElementsByTagName()：使用指定的标签名返回所有的元</strong><br><strong>素，这些元素是您在使用此方法时所处的元素的后代</strong></li>
+</ul>
+<h2 id="JavaScript-的调试工具及调试方法"><a href="#JavaScript-的调试工具及调试方法" class="headerlink" title="JavaScript 的调试工具及调试方法"></a><strong>JavaScript 的调试工具及调试方法</strong></h2><ul>
+<li><strong>调试工具:Firebug工具</strong></li>
+<li><strong>安装：火狐浏览器 - 选顷 – 附加组件 – 搜索Firebug添加即可。安装完成，按键盘f12即可打开Firebug</strong></li>
+<li><strong>Chrome和ie自带调试工具，不需要安装</strong></li>
+<li><strong>调试方法</strong><ol>
+<li><strong>使用Firebug的HTML 、 CSS、脚本顷查看页面的html标签、 CSS文件、 JS文件。</strong></li>
+<li><strong>Firebug控制台:</strong><ol>
+<li><strong>如果页面报错，会在控制台显示：包括错误原因和行号</strong></li>
+<li><strong>控制台最下边的输入框可以输入js代码，提交浏览器执行</strong></li>
+</ol>
+</li>
+<li><strong>利用js的console方法，可以在控制台输出js代码中的值、对象、 DOM等，以方便查看对象的结构</strong><br><strong>常用方法：console.log() console.dir()</strong></li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-07 01  javascript" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/08/07 01  javascript/" class="article-date">
+      <time datetime="2017-10-08T08:30:16.000Z" itemprop="datePublished">2017-10-08</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/08/07 01  javascript/">javascript基本对象,数据类型,常量,变量</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="javascript基本对象-数据类型-常量-变量"><a href="#javascript基本对象-数据类型-常量-变量" class="headerlink" title="javascript基本对象,数据类型,常量,变量"></a><strong>javascript基本对象,数据类型,常量,变量</strong></h1><h2 id="javascript数据类型"><a href="#javascript数据类型" class="headerlink" title="javascript数据类型"></a><strong>javascript数据类型</strong></h2><ul>
+<li><strong>基本数据类型</strong><ol>
+<li><strong>Number</strong></li>
+<li><strong>String</strong></li>
+<li><strong>Boolean</strong></li>
+<li><strong>Null</strong></li>
+<li><strong>Undefined</strong></li>
+</ol>
+</li>
+<li><strong>混合数据类型</strong><ul>
+<li><strong>Object</strong></li>
+</ul>
+</li>
+<li><strong>js中变量是松散类型的，因此有时我们需要检测变量的数据类型</strong></li>
+<li><strong>typeof操作符可以检测变量的数据类型（输出的是一个关于数据类型的字符串）</strong></li>
+</ul>
+<h3 id="数字-Number"><a href="#数字-Number" class="headerlink" title="数字(Number)"></a><strong>数字(Number)</strong></h3><ul>
+<li><p><strong>介绍Number类型包含整数和浮点数（浮点数数值必须包含一个小数点，且小数点后面至少有一位数字）两种值</strong></p>
+<blockquote>
+<p>例如:<code>var x1=34.00</code>; //使用小数点来写<br><strong><code>var x2=34</code>; //不使用小数点来写</strong></p>
+</blockquote>
+</li>
+<li><p><strong>极大或极小的数字可以通过科学（指数）计数法来书写：</strong></p>
+<blockquote>
+<p>例：<code>var y=123e5; // 12300000</code><br><strong><code>var z=123e-5; // 0.00123</code></strong></p>
+</blockquote>
+</li>
+<li><p><strong>NaN:非数字类型</strong></p>
+<ul>
+<li><strong>特点：涉及到的 任何关于NaN的操作，都会返回NaN</strong></li>
+<li><strong>NaN不等于自身。</strong><blockquote>
+<p>例：<code>var ab = &quot;a1&quot;;</code><br><code>console.log(ab/10);// NaN</code><br><strong><code>console.log(NaN == NaN);// false;</code></strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>###<strong>字符串（string）</strong></p>
+<blockquote>
+<p>例：<code>var carname=&quot;Bill Gates&quot;;</code><br><strong><code>var answer=&quot;He is called &#39;Johnny&#39;&quot;;</code></strong></p>
+</blockquote>
+<ul>
+<li><strong>字符串是存储字符（比如 “Bill Gates”）的变量。</strong></li>
+<li><strong>字符串可以是引号中的任意文本，可以使用单引号或双引号，只要不匹配包围字符串的引号即可</strong></li>
+<li><strong>注： JavaScript对大小写敏感</strong></li>
+</ul>
+<p>###<strong>布尔（boolean）</strong></p>
+<blockquote>
+<p><strong>例：<code>var x=true</code></strong><br><strong><code>var y=false</code></strong></p>
+<ul>
+<li><strong>布尔（逻辑）只能有两个值：<code>true</code> 或 <code>false</code>。</strong></li>
+</ul>
+</blockquote>
+<h3 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a><strong>Undefined</strong></h3><ul>
+<li><strong>Undefined 这个值表示变量不含有值。</strong></li>
+<li><strong>可以通过将变量的值设置为 null 来清空变量</strong></li>
+</ul>
+<h3 id="null"><a href="#null" class="headerlink" title="null"></a><strong>null</strong></h3><ul>
+<li><strong>null类型被看做空对象指针，null类型也是空的对象引用。</strong><br><strong>只有一个值，即null值，所以，在用typeof 操作符去检测</strong><br><strong>null类型的值时，结果是object类型。</strong><br><strong>如果你定义了一个变量，但是想在以后把这个变量当做一</strong><br><strong>个对象来用，那么最好将该对象初始化为null值</strong></li>
+</ul>
+<p>###<strong>对象（object）</strong></p>
+<ul>
+<li><p><strong>对象由花括号分隔。在括号内部，对象的属性以名称和</strong><br><strong>值对的形式 (name : value) 来定义。属性由逗号分隔：</strong></p>
+<blockquote>
+<p>例：var person={<br>firstname : “Bill”,<br>lastname : “Gates“<br><strong>};</strong></p>
+</blockquote>
+</li>
+<li><p><strong>数组为混合数据类型中的一种</strong></p>
+</li>
+</ul>
+<h2 id="常量Constant：不变的值"><a href="#常量Constant：不变的值" class="headerlink" title="常量Constant：不变的值"></a><strong>常量Constant：不变的值</strong></h2><ul>
+<li><p><strong><code>const constantName = value1；</code></strong></p>
+<blockquote>
+<p><strong>常量名首字符为字母或下划线，其后可有数字。 value1为直接量或表达式。</strong></p>
+</blockquote>
+</li>
+<li><p><strong>1个const关键字可定义1个或多个常量。</strong></p>
+</li>
+<li><strong>内置常量：JS中Infinity表无穷大的数值，-indinity表无穷小.NaN表非数值。</strong><blockquote>
+<p>例：const a = 10;<br> alert(a)</p>
+</blockquote>
+</li>
+</ul>
+<p>##<strong>变量</strong></p>
+<ul>
+<li><strong>概念:变量是存取数字、提供存放信息的容器。对于变量，必须明确变量的命名、变量的类型、变量的声明及其变量的作用域。命名规范</strong></li>
+<li><p><strong>变量命名规范:</strong></p>
+<ul>
+<li><strong>变量必须以字母或下划线开头，后可以跟字母、数字、下划线，不能有空格或特殊字符等。</strong></li>
+<li><strong>不用使用Javascript中的关键字作为变量，如var,true,double等。</strong></li>
+<li><strong>在对变量命名时，最好把变量的意义与其代表的意思对应起来，以免发现错误。</strong></li>
+</ul>
+</li>
+<li><p><strong>变量的类型：</strong></p>
+<ul>
+<li><strong>整数变量：x=100;</strong></li>
+<li><strong>字符串变量：y=“125”</strong></li>
+<li><strong>布尔型变量：xy=True</strong></li>
+<li><strong>实型变量：cost=19.5</strong></li>
+</ul>
+</li>
+<li><p><strong>变量的声明</strong></p>
+<ul>
+<li><strong>JavaScript可以在使用前先声明，并可赋值。变量声明用可用命令<code>var</code>;</strong><blockquote>
+<p>例：<code>var mytest;</code><br>该例子定义了一个mytest变量，但没有赋予其值<br><strong>例：var mytest=“This is a book”</strong><br><strong>该例子定义了变量并为其赋予了值。</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>变量的作用域：</strong></p>
+<ul>
+<li><strong>变量分为全局变量和局部变量。</strong><ul>
+<li><strong>全局变量是定义在所有函数体之外，其作用范围是整个函数</strong></li>
+</ul>
+</li>
+<li><strong>局部变量是定义在函数体之内，只对其该函数是可见的，而对其它函数则是不可见的。</strong></li>
+<li><strong>函数体内可以访问父级函数的变量，父级函数不能访问子函数的变量。</strong><br><strong>注：在声明变量时凡是没有var关键字，而直接赋值的变量均为全局变量</strong></li>
+</ul>
+</li>
+</ul>
+<p>##　<strong>JavaScript 的基本对象</strong></p>
+<blockquote>
+<p><strong>对象包括：系统标准类对象 和 自定义对象</strong></p>
+</blockquote>
+<ul>
+<li><strong>标准类对象:</strong><ul>
+<li><strong>字符串对象String、</strong></li>
+<li><strong>日期对象Date、</strong></li>
+<li><strong>数组对象Array、</strong></li>
+<li><strong>数字对象Number 、</strong></li>
+<li><strong>数学对象Math、</strong></li>
+<li><strong>正则表达式对象RegExp</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>*自定义类对象:自定义的包含属性和方法的对象</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">例：<span class="keyword">var</span> person=&#123;</div><div class="line">firstname : <span class="string">"Bill"</span>,</div><div class="line">lastname : <span class="string">"Gates"</span>,</div><div class="line">eat : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 4;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

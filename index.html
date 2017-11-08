@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>喵喵喵？？</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="喵喵喵？？">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="喵喵喵？？">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="喵喵喵？？">
+  
+    <link rel="alternative" href="/atom.xml" title="喵喵喵？？" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -60px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/tororo/tororo.model.json",0.5)</script>
+  
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">John Doe</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder=" Search...">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/前端基础/" style="font-size: 10px;">前端基础</a> <a href="/tags/动态网页编程/" style="font-size: 10px;">动态网页编程</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">John Doe</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">John Doe</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-Ajax 常问问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/23/Ajax 常问问题/" class="article-date">
+      <time datetime="2017-10-23T13:30:16.000Z" itemprop="datePublished">2017-10-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/23/Ajax 常问问题/">Ajax 常问问题</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Ajax-常问问题"><a href="#Ajax-常问问题" class="headerlink" title="Ajax 常问问题"></a><strong>Ajax 常问问题</strong></h1><ol>
+<li><p><strong>什么是ajax，为什么要使用Ajax（请谈一下你对Ajax的认识）</strong></p>
+<ol>
+<li><p><strong>什么是ajax：</strong></p>
+<blockquote>
+<p><strong>AJAX是“Asynchronous JavaScript and XML”的缩写。他是指一种创建交互式网页应用的网页开发技术。</strong></p>
+</blockquote>
+</li>
+<li><p><strong>Ajax包含下列技术：</strong></p>
+<blockquote>
+<ul>
+<li><strong>基于web标准（standards-based presentation）XHTML+CSS的表示；</strong></li>
+<li><strong>使用 DOM（Document Object Model）进行动态显示及交互；</strong></li>
+<li><strong>使用 XML 和 XSLT 进行数据交换及相关操作；</strong></li>
+<li><strong>使用 XMLHttpRequest 进行异步数据查询、检索；</strong></li>
+<li><strong>使用 JavaScript 将所有的东西绑定在一起。</strong></li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p><strong>为什么要用ajax：Ajax应用程序的优势在于：</strong></p>
+<ol>
+<li><strong>通过异步模式，提升了用户体验</strong></li>
+<li><strong>优化了浏览器和服务器之间的传输，减少不必要的数据往返，减少了带宽占用</strong></li>
+<li><strong>Ajax引擎在客户端运行，承担了一部分本来由服务器承担的工作，从而减少了大用户量下的服务器负载。</strong></li>
+</ol>
+</li>
+<li><p><strong>Ajax的最大的特点是什么。</strong></p>
+<blockquote>
+<p><strong>Ajax可以实现动态不刷新（局部刷新）</strong></p>
+</blockquote>
+<p><strong>就是能在不更新整个页面的前提下维护数据。这使得Web应用程序更为迅捷地回应用户动作，并避免了在网络上发送那些没有改变过的信息。</strong></p>
+</li>
+<li><p><strong>请介绍一下XMLHTTPREQUEST对象？</strong></p>
+<p><strong>Ajax的核心是JavaScript对象XmlHttpRequest。该对象在Internet Explorer 5中首次引入，它是一种支持异步请求的技术。简而言之，XmlHttpRequest使您可以使用JavaScript向服务器提出请求并处理响应，而不阻塞用户。通过XMLHttpRequest对象，Web开发人员可以在页面加载以后进行页面的局部更新。</strong></p>
+</li>
+<li><p><strong>Ajax技术体系的组成部分有哪些？</strong></p>
+<p><strong>HTML，css，dom，xml，xmlHttpRequest，javascript</strong></p>
+</li>
+<li><p><strong>AJAX应用和传统Web应用有什么不同？</strong></p>
+<p><strong>在传统的Javascript编程中，如果想得到服务器端数据库或文件上的信息，或者发送客户端信息到服务器，需要建立一个HTML form然后GET或者POST数据到服务器端。用户需要点击”Submit”按钮来发送或者接受数据信息，然后等待服务器响应请求，页面重新加载。</strong></p>
+<p><strong>因为服务器每次都会返回一个新的页面， 所以传统的web应用有可能很慢而且用户交互不友好。</strong></p>
+<p><strong>使用AJAX技术， 就可以使Javascript通过XMLHttpRequest对象直接与服务器进行交互。</strong></p>
+<p><strong>通过HTTP Request， 一个web页面可以发送一个请求到web服务器并且接受web服务器返回的信息(不用重新加载页面)，展示给用户的还是通一个页面，用户感觉页面刷新，也看不到到Javascript后台进行的发送请求和接受响应。</strong></p>
+</li>
+<li><p><strong>Ajax和javascript的区别？</strong></p>
+<p><strong>javascript是一种在浏览器端执行的脚本语言，Ajax是一种创建交互式网页应用的开发技术 ，它是利用了一系列相关的技术其中就包括javascript。</strong></p>
+<p><strong>Javascript是由网景公司开发的一种脚本语言，它和sun公司的java语言是没有任何关系的，它们相似的名称只是一种行销策略。</strong></p>
+<p><strong>在一般的web开发中，javascript是在浏览器端执行的，我们可以用javascript控制浏览器的行为和内容。</strong></p>
+<p><strong>在 Ajax应用中信息是如何在浏览器和服务器之间传递的</strong></p>
+<p><strong>通过XML数据或者字符串</strong></p>
+</li>
+<li><p><strong>在浏览器端如何得到服务器端响应的XML数据</strong></p>
+<p><strong>XMLHttpRequest对象的responseXMl属性</strong></p>
+</li>
+<li><p><strong>XMLHttpRequest对象在IE和Firefox中创建方式有没有不同？</strong></p>
+<p><strong>有，IE中通过new ActiveXObject()得到，Firefox中通过new XMLHttpRequest()得到</strong></p>
+</li>
+<li><p><strong>介绍一下XMLHttpRequest对象的常用方法和属性（回答的越多越好）</strong></p>
+<p><strong>open(“method”,”URL”) 建立对服务器的调用，第一个参数是HTTP请求 方式可以为GET，POST或任何服务器所支持的您想调用的方式。</strong><br><strong>第二个参数是请求页面的URL。</strong></p>
+<p><strong>send()方法，发送具体请求</strong></p>
+<p><strong>abort()方法，停止当前请求</strong></p>
+<p><strong>readyState属性 请求的状态 有5个可取值</strong><br><strong>0=未初始化 ，1=正在加载,2=以加载，3=交互中，4=完成</strong></p>
+<p><strong>responseText 属性 服务器的响应，表示为一个串</strong></p>
+<p><strong>reponseXML 属性 服务器的响应，表示为XML</strong></p>
+<p><strong>status 服务器的HTTP状态码，200对应ok 400对应not found</strong></p>
+</li>
+<li><p><strong>Ajax的优点和缺点</strong></p>
+<p><strong>使用Ajax的最大优点，就是能在不更新整个页面的前提下维护数据。这使得Web应用程序更为迅捷地回应用户动作，并避免了在网络上发送那些没有改变过的信息。</strong></p>
+<p><strong>对应用Ajax最主要的缺点就是，它可能破坏浏览器后退按钮的正常行为</strong></p>
+<p><strong>因为Ajax中采用了xml技术，所以在Ajax中也可能问到XML的问题</strong></p>
+</li>
+</ol>
+<ol>
+<li><p><strong>介绍一下XMLHttpRequest对象</strong></p>
+<p><strong>通过XMLHttpRequest对象，Web开发人员可以在页面加载以后进行页面的局部更新。</strong></p>
+<p><strong>AJAX开始流行始于Google在2005年使用的”Google Suggest”。</strong></p>
+<p><strong>“Google Suggest”就是使用XMLHttpRequest对象来创建动态的Web接口：</strong></p>
+<p><strong>当用户开始输入google的搜索框，Javascript发送用户输入的字符到服务器，然后服务器返回一个建议列表。</strong></p>
+<p><strong>XMLHttpRequest对象在IE5.0+, Safari 1.2, Mozilla 1.0/Firefox, Opera 8+ 和NetScapt7 开始被支持。</strong></p>
+</li>
+<li><p><strong>AJAX应用和传统Web应用有什么不同？</strong></p>
+<p><strong>在传统的Javascript编程中，如果想得到服务器端数据库或文件上的信息，或者发送客户端信息到服务器，需要建立一个HTML form然后GET或者POST数据到服务器端。用户需要点击”Submit”按钮来发送或者接受数据信息，然后等待服务器响应请求，页面重新加载。</strong></p>
+<p><strong>因为服务器每次都会返回一个新的页面， 所以传统的web应用有可能很慢而且用户交互不友好。</strong></p>
+<p><strong>使用AJAX技术， 就可以使Javascript通过XMLHttpRequest对象直接与服务器进行交互。</strong></p>
+<p><strong>通过HTTP Request， 一个web页面可以发送一个请求到web服务器并且接受web服务器返回的信息(不用重新加载页面)，展示给用户的还是通一个页面，用户感觉页面刷新，也看不到到Javascript后台进行的发送请求和接受响应。</strong></p>
+</li>
+<li><p><strong>AJAX的全称是什么？介绍一下AJAX？</strong></p>
+<p><strong>AJAX的全称是Asynchronous JavaScript And XML.</strong></p>
+<p><strong>AJAX是2005年由Google发起并流行起来的编程方法， AJAX不是一个新的编程语言，但是它是一个使用已有标准的新的编程技术。</strong></p>
+<p><strong>使用AJAX可以创建更好，更快，更用户界面友好的Web应用。</strong></p>
+</li>
+</ol>
+<p><strong>AJAX技术基于Javascript和HTTP Request.</strong></p>
+<ol>
+<li><p><strong>介绍一下XMLHttpRequest对象的常用方法和属性？</strong></p>
+<p><strong>open(“method”,”URL”) 建立对服务器的调用，第一个参数是HTTP请求 方式可以为GET，POST或任何服务器所支持的您想调用的方式。</strong></p>
+<p><strong>第二个参数是请求页面的URL。</strong></p>
+<p><strong>send()方法，发送具体请求</strong><br><strong>readyState属性 请求的状态 有5个可取值 0=未初始化 ，1=正在加载 2=以加载，3=交互中，4=完成</strong></p>
+<p><strong>responseText 属性 服务器的响应，表示为一个串</strong></p>
+<p><strong>reponseXML 属性 服务器的响应，表示为XML</strong></p>
+<p><strong>status 服务器的HTTP状态码，200对应ok 400对应not found</strong></p>
+</li>
+<li><p><strong>.Ajax主要包含了哪些技术？</strong></p>
+<p><strong>Ajax（Asynchronous JavaScript + XML）的定义</strong></p>
+<p><strong>基于web标准（standards-based presentation）XHTML+CSS的表示；</strong></p>
+<p><strong>使 用 DOM（Document Object Model）进行动态显示及交互；</strong></p>
+<p><strong>使用 XML 和 XSLT 进行数据交换及相关操作；</strong></p>
+<p><strong>使用 XMLHttpRequest 进行异步数据查询、检索；</strong></p>
+<p><strong>使用 JavaScript 将所有的东西绑定在一起。英文参见Ajax的提出者Jesse James Garrett的原文,原文题目(Ajax: A New Approach to Web Applications)。</strong></p>
+<p><strong>类似于DHTML或LAMP，AJAX不是指一种单一的技术，而是有机地利用了一系列相关的技术。事实上，一些基于AJAX的“派生/合成”式（derivative/composite）的技术正在出现，如“AFLAX”。</strong></p>
+<p><strong>AJAX的应用使用支持以上技术的web浏览器作为运行平台。这些浏览器目前包括：Mozilla、Firefox、Internet Explorer、Opera、Konqueror及Safari。但是Opera不支持XSL格式对象，也不支持XSLT。</strong></p>
+</li>
+<li><p><strong>AJAX都有哪些有点和缺点？</strong></p>
+<p><strong>1、最大的一点是页面无刷新，用户的体验非常好。</strong></p>
+<p><strong>2、使用异步方式与服务器通信，具有更加迅速的响应能力。</strong></p>
+<p><strong>3、可以把以前一些服务器负担的工作转嫁到客户端，利用客户端闲置的能力来处理，减轻服务器和带宽的负担，节约空间和宽带租用成本。并且减轻服务器的负担，ajax的原则是“按需取数据”，可以最大程度的减少冗余请求，和响应对服务器造成的负担。</strong></p>
+<p><strong>4、基于标准化的并被广泛支持的技术，不需要下载插件或者小程序。</strong></p>
+<p><strong>ajax的缺点</strong></p>
+<p><strong>1、ajax不支持浏览器back按钮。</strong></p>
+<p><strong>2、安全问题 AJAX暴露了与服务器交互的细节。</strong><br><strong>3、不容易调试。</strong> </p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-ajax 总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/22/ajax 总结/" class="article-date">
+      <time datetime="2017-10-22T13:30:16.000Z" itemprop="datePublished">2017-10-22</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/22/ajax 总结/">ajax</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h1><ul>
+<li>定义: ajax 就是前端和后端进行交流的一门js技术</li>
+<li><p>作用:</p>
+<ul>
+<li>实现不刷新页面的情况下,更新局部页面</li>
+</ul>
+</li>
+<li><p>分类(ajax 是前端和后端交流的技术,)</p>
+<ul>
+<li><p>同域请求:</p>
+<ul>
+<li>浏览器有同源策略(协议,域名,端口,)一致,就是同源,</li>
+<li>为什么有同源策略?<ul>
+<li>为了用户安全;</li>
+</ul>
+</li>
+<li><p>常规的ajax:</p>
+<ul>
+<li><ol>
+<li>初始化一个ajax对象<blockquote>
+<p>var xhr= new XMLHttpRequest();</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol>
+<li>创建连接<blockquote>
+<p>xhr.open(“请求方式”,”请求地址”,”同步还是异步”);</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol>
+<li>发送数据<blockquote>
+<p>xhr.send();</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol>
+<li>等待并拿到后台给我们的数据<ul>
+<li>等待并且拿到后台给咱们的数据;</li>
+<li>通过检测xhr(ajax对象)的状态 来获取数据</li>
+<li>xhr.readyState=4 ,说明了后台已经开始返回数据,</li>
+<li>xhr.status==200  说明了 所有数据都传输完毕了</li>
+<li>xhr.responseText 通过这个方法拿到数据<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">xhr.onreadystatechange=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(xhr.readyState==<span class="number">4</span>  &amp;&amp; xhr.status==<span class="number">200</span> )&#123;</div><div class="line">                <span class="keyword">var</span> data= xhr.responseText</div><div class="line"></div><div class="line">                       <span class="comment">//根据需求 操作数据</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>请求方式 :</p>
+<ul>
+<li>get 请求:<ul>
+<li>数据都在地址栏中</li>
+<li>数据大小有限制</li>
+<li>传输速度快</li>
+<li>不安全</li>
+</ul>
+</li>
+<li>post 请求:<ul>
+<li>数据在内部发送,相对安全</li>
+<li>传输速度相对较慢</li>
+<li>数据大小理论无限制</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- 跨域请求(相对于你给你家人以外的人通电话);
+    - 什么是跨域?
+        &gt; 协议,域名,端口,有一项和你当前的不一致,就是跨域;
+
+    - 如何实现跨域:
+          1. 动态创建一个带有 src 属性的标签, img, iframe , script(推荐使用)
+          &gt; var script=document.createElement(&quot;script&quot;);
+          2. 让他的src属性等于你要请求的地址
+          &gt; script.src=你要请求的地址?callback=你要的方法
+          3. 把你创建的标签放到文档中;
+          &gt; document.body.appendchild(script);
+          4. 如果你需要对返回的数据操作,你得给他传递一个callback参数,callback=你要的方法
+            - 页面上必须有一个 你要的方法,在这个方法中咱们就可以操作数据;
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-AJAX概念及form提交" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/21/AJAX概念及form提交/" class="article-date">
+      <time datetime="2017-10-21T13:30:16.000Z" itemprop="datePublished">2017-10-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/21/AJAX概念及form提交/">AJAX概念及form提交</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="AJAX概念及form提交"><a href="#AJAX概念及form提交" class="headerlink" title="AJAX概念及form提交"></a>AJAX概念及form提交</h1><h2 id="AJAX概念"><a href="#AJAX概念" class="headerlink" title="AJAX概念"></a>AJAX概念</h2><ul>
+<li><p>AJAX 是什么？</p>
+<blockquote>
+<p><strong>Asynchronous JavaScript and XML（异步JavaScript和XML)</strong></p>
+</blockquote>
+</li>
+<li><p>作用</p>
+<ul>
+<li><strong>不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。</strong></li>
+<li>节省用户操作，时间，提高用户体验，减少数据请求传输获取数据</li>
+</ul>
+</li>
+<li><p>过程：</p>
+<blockquote>
+<p>初始化 – &gt;发送请求 –&gt; 服务器收到请求 –&gt; 服务器处理 –&gt; 返回结果</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h1><ul>
+<li>表单form<ul>
+<li>action 提交到哪里</li>
+<li>method 提交方式</li>
+</ul>
+</li>
+<li>Get方式<ul>
+<li>Get通过url地址传输</li>
+<li>有数据量限制，每个浏览器都不同</li>
+<li>不安全</li>
+</ul>
+</li>
+<li>Post方式<ul>
+<li>Post通过浏览器内部传输</li>
+<li>数据量理论上无限</li>
+<li>相对比较安全</li>
+</ul>
+</li>
+<li>enctype : 提交的数据格式，默认application/x-www-form-urlencoded</li>
+<li>提交方式必须与后台的接收方式一致。</li>
+</ul>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p>try {}catch{}用于异常处理，当try语句里的内容执行出现<br>错误的时候，就会执行catch里的语句。 catch里能使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">    //err.message捕获出错的原因。</div><div class="line">    try&#123;//此处是可能产生例外的语句</div><div class="line">&#125;catch(err)&#123;</div><div class="line">//此处是负责例外的处理白语句</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>finally里是始终会执行的语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Try&#123;</div><div class="line">//此处是可能产生例外的语句</div><div class="line">&#125; catch (err) &#123;</div><div class="line">//此处是负责例外处理的语句</div><div class="line">&#125;finally&#123;</div><div class="line">//此处是出口语句，当try，catch的</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="AJAX的方法"><a href="#AJAX的方法" class="headerlink" title="AJAX的方法"></a>AJAX的方法</h1><ul>
+<li>Open方法 open(method,url,async)<ul>
+<li>三个参数的含义<br>1、提交方式 Form-method<br>2、提交地址 Form-action<br>3、异步（同步）</li>
+</ul>
+</li>
+<li>Send方法<br>发送数据请求，相当于Form的submit</li>
+<li>AJAX请求状态监控<ul>
+<li>onreadystatechange事件</li>
+<li>readyState属性：请求状态<br>0 （初始化）还没有调用open()方法<br>1（载入）已调用send()方法，正在发送请求<br>2（载入完成）send()方法完成，已收到全部响应内容<br>3（解析）正在解析响应内容<br>4（完成）响应内容解析完成，可以在客户端调用了</li>
+<li>status属性：服务器(请求资源)的状态</li>
+</ul>
+</li>
+</ul>
+<h1 id="AJAX返回数据的处理"><a href="#AJAX返回数据的处理" class="headerlink" title="AJAX返回数据的处理"></a>AJAX返回数据的处理</h1><ul>
+<li>返回的内容<ul>
+<li>responseText：返回以文本形式存放的内容</li>
+<li>responseXML：返回XML形式的内容</li>
+</ul>
+</li>
+<li>返回数据的处理<ul>
+<li>数据类型：XML、 HTML、 JSON</li>
+<li>Eval解析JSON的时候需要注意的地方</li>
+<li>JSON.parse() : 字符串解析成对象</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-jQuery 中的遍历" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/20/jQuery 中的遍历/" class="article-date">
+      <time datetime="2017-10-20T13:26:57.000Z" itemprop="datePublished">2017-10-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/20/jQuery 中的遍历/">jQuery 中的遍历</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="jQuery-中的遍历"><a href="#jQuery-中的遍历" class="headerlink" title="jQuery 中的遍历"></a>jQuery 中的遍历</h2><blockquote>
+<p>jQuery 遍历 ：用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素 。以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止。<br><strong>jQ遍历分为四种，1. 想上遍历 2. 向下遍历 3. 过滤 4. 水平遍历</strong></p>
+</blockquote>
+<ul>
+<li><p><strong>.eq </strong>过滤遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;li&apos;).eq(0).css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>第几个，从零开始</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>.first()</strong> 过滤遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;li&apos;).first().css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>第一个</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>.last()</strong> 过滤遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;li&apos;).last().css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>最后一个</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>.slice()</strong> 过滤遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;li&apos;).slice(2,4).css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有li标签中的<strong>第几个到第几个，下标从零开始，要头不要尾</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>.children(选择器)</strong> 向下遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;ul&apos;).children(&apos;div&apos;).css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有ul标签中的<strong>所有【直接子元素】是选择器的元素</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>.find(选择器)</strong> 向下遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;ul&apos;).find(&apos;div&apos;).css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>查找获取到所有ul标签中的<strong>所有后代是选择器的元素</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>.parent()</strong> 向上遍历</p>
+<ul>
+<li><p>用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;ul&apos;).parent().css(&apos;background&apos;,&apos;red&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>说明：</p>
+<blockquote>
+<p>返回ul的<strong>直接父元素</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>更多遍历方法</p>
+<ul>
+<li>向上遍历 （查找元素祖先）</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>遍历方法</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parent()</td>
+<td>返回被选元素的直接父元素 (只会向下一级对 DOM 树进行遍历 )</td>
+<td>$(“span”).parent();</td>
+</tr>
+<tr>
+<td>parents()</td>
+<td>返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (<code>&lt;html&gt;</code>)</td>
+<td>$(“span”).parents();$(“span”).parents(“ul”)返回所有 <code>&lt;span&gt;</code> 元素的所有祖先，并且它是<code>&lt;ul&gt;</code> 元素</td>
+</tr>
+<tr>
+<td>parentsUntil()</td>
+<td>返回介于两个给定元素之间的所有祖先元素</td>
+<td>$(“span”).parentsUntil(“div”);</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* 向下遍历（查找元素后代）</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>遍历方法</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>children()</td>
+<td>返回被选元素的所有直接子元素(只会向下一级对 DOM 树进行遍历 )</td>
+<td>$(“div”).children()$(“div”).children(“p.1”)返回类名为 “1” 的所有 <code>&lt;p&gt;</code> 元素，并且它们是<code>&lt;div&gt;</code> 的直接子元素</td>
+</tr>
+<tr>
+<td>find()</td>
+<td>返回被选元素的后代元素，一路向下直到最后一个后代</td>
+<td>$(“div”).find(“span”);$(“div”).find(“*”);返回 <code>&lt;div&gt;</code> 的所有后代</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* 水平遍历方法(元素同胞元素)：</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>遍历方法</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>siblings()</td>
+<td>返回被选元素的所有同胞元素</td>
+<td>$(“h2”).siblings();$(“h2”).siblings(“p”);返回属于 <code>&lt;h2&gt;</code> 的同胞元素的所有 <code>&lt;p&gt;</code> 元素</td>
+</tr>
+<tr>
+<td>next() prev()</td>
+<td>返回被选元素的下一个/上一个同胞元素</td>
+<td>$(“h2”).next();</td>
+</tr>
+<tr>
+<td>nextAll()prevAll()</td>
+<td>返回被选元素的所有跟随的同胞（前面同胞）元素</td>
+<td>$(“h2”).nextAll();</td>
+</tr>
+<tr>
+<td>nextUntil()prevUntil()</td>
+<td>返回介于两个给定参数之间的所有跟随的同胞（前面同胞）元素</td>
+<td>$(“h2”).nextUntil(“h6”);</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* 过滤：</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>遍历方法</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>first()</td>
+<td>返回被选元素的首个元素</td>
+<td>$(“div p”).first();</td>
+</tr>
+<tr>
+<td>last()</td>
+<td>返回被选元素的最后一个元素</td>
+<td>$(“div p”).last();</td>
+</tr>
+<tr>
+<td>eq()</td>
+<td>返回被选元素中带有指定索引号的元素</td>
+<td>$(“p”).eq(1);</td>
+</tr>
+<tr>
+<td>filter()</td>
+<td>不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回</td>
+<td>$(“p”).filter(“.intro”);</td>
+</tr>
+<tr>
+<td>not() not()</td>
+<td>方法返回不匹配标准的所有元素not() 方法不 filter() 相反。</td>
+<td>$(“p”).not(“.intro”);</td>
+</tr>
+</tbody>
+</table>
+<p><code>* 遍历所有 **each遍历：**    * each()方法规定为每个匹配元素指定运行的函数        &gt; 语法：</code>$(selector).each(function(index,element))<code>* 例如         $(&quot;button&quot;).click(function(){    $(&quot;li&quot;).each(function(){    alert($(this).text())   });});</code></p>
+<h2 id="jQuery制作下拉列表"><a href="#jQuery制作下拉列表" class="headerlink" title="jQuery制作下拉列表"></a>jQuery制作下拉列表</h2><ul>
+<li>下拉列表<ul>
+<li>三级下拉列表（竖向）：单击一级菜单时展开二级菜单，单击二级菜单时展开三级菜单，当单击另一个一级菜单时同级其它菜单将收起。</li>
+</ul>
+</li>
+<li>多级下拉列表（横向）：<ul>
+<li>鼠标经过一级菜单时展开二级菜单，经过二级菜单<br>时展开三级菜单，依次类推</li>
+</ul>
+</li>
+</ul>
+<h2 id="easing-js的使用"><a href="#easing-js的使用" class="headerlink" title="easing.js的使用"></a>easing.js的使用</h2><blockquote>
+<p><a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank" rel="external">easing.js</a>是个极小的 JavaScript 第三方包，支持 CSS3 的动画效果，非常简单美观。<br>move.js中有编写了多种效果</p>
+</blockquote>
+<ul>
+<li>老规矩，要使用，先引用<code>&lt;script src=&quot;js/jquery-1.8.3.min.js&quot;&gt;&lt;/script&gt;// easing是基于jQ的，说要在引用他之前要先引用jQ&lt;script src=&quot;js/easing.js&quot;&gt;&lt;/script&gt;</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(this).find(&quot;ul&quot;).sto</div><div class="line">p().slideDown(600,&apos;效果名称&apos;);</div><div class="line"></div><div class="line">//我们只需在这更换效果名称即可：如easeIn,easeOut，elasticOut等。</div></pre></td></tr></table></figure>
+<h2 id="animate-css的使用"><a href="#animate-css的使用" class="headerlink" title="animate.css的使用"></a>animate.css的使用</h2><blockquote>
+<p><a href="http://www.dowebok.com/demo/2014/98/" target="_blank" rel="external">animate.css</a>animate.css 是一个来自国外的 CSS3 动画库，它预设了抖动（shake）、闪烁（flash）、弹跳（bounce）、翻转（flip）、旋转（rotateIn/rotateOut）、淡入淡出（fadeIn/fadeOut）等多达 60 多种动画效果，几乎包含了所有常见的动画效果。</p>
+</blockquote>
+<p>虽然借助 animate.css 能够很方便、快速的制作 CSS3 动画效果，但还是建议看看 animate.css 的代码，也许你能从中学到一些东西。</p>
+<ul>
+<li><p>使用</p>
+<blockquote>
+<p>引入文件：<code>&lt;link href=&quot;animate.css&quot; type=&quot;text/css&quot; /&gt;</code><br>HTML及使用：<code>&lt;div class=“animated bounce” &gt;&lt;/div&gt;</code><br>刷新页面就可看到动画效果</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JQuery 基础二" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/19/JQuery 基础二/" class="article-date">
+      <time datetime="2017-10-19T13:26:57.000Z" itemprop="datePublished">2017-10-19</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/19/JQuery 基础二/">JQuery 基础</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="JQuery-基础二"><a href="#JQuery-基础二" class="headerlink" title="JQuery 基础二"></a>JQuery 基础二</h1><h2 id="鼠标键盘事件"><a href="#鼠标键盘事件" class="headerlink" title="鼠标键盘事件"></a>鼠标键盘事件</h2><ul>
+<li>鼠标事件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>描述</th>
+<th>举例说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mousedown</td>
+<td>当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown事件</td>
+<td>$(“button”).mousedown(function(){$(“p”).slideToggle()</td>
+</tr>
+<tr>
+<td>mouseup</td>
+<td>当在元素上放松鼠标按钮时，会发生mouseup 事件</td>
+<td>$(“button”).mouseup(function(){$(“p”).slideToggle();})</td>
+</tr>
+<tr>
+<td>mouseenter</td>
+<td>当鼠标指针穿过元素时，会发生mouseenter 事件</td>
+<td>$(“p”).mouseenter(function(){$(“p”).css(“backgroundcolor”,”yellow”); });</td>
+</tr>
+<tr>
+<td>mousemove</td>
+<td>当鼠标指针在指定的元素中移动时，就会发生 mousemove 事件</td>
+<td>$(“button”).mousemove(function(){})</td>
+</tr>
+<tr>
+<td>event.pageX</td>
+<td>pageX() 属性是鼠标指针的位置，相对于文档的左边缘</td>
+<td>$(document).mousemove(function(e){$(“span”).text(“X: “ +e.pageX});</td>
+</tr>
+<tr>
+<td>event.pageY pageY()</td>
+<td>属性是鼠标指针的位置，相对于文档的上边缘</td>
+<td>$(document).mousemove(function(e){ $(“span”).text(“Y: “ +e.pageY});</td>
+</tr>
+<tr>
+<td>mouseover</td>
+<td>当鼠标指针位于元素上方时，会发生mouseover 事件</td>
+<td>$(“button”).mouseover(function(){})</td>
+</tr>
+<tr>
+<td>event.preventDefault();</td>
+<td>阻止元素发生默认的行为</td>
+<td>$(“a”).click(function(event){event.preventDefault(); });</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>键盘事件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>描述</th>
+<th>举例说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keydown</td>
+<td>当按钮被按下时，发生 keydown 事件</td>
+<td>$(“input”).keydown(function(){$(“input”).css(“color”,”#FFFFCC”); });</td>
+</tr>
+<tr>
+<td>keypress</td>
+<td>当按钮被按下时，会发生该事件。它发生在当前获得焦点的元素上</td>
+<td>$(“input”).keypress(function(){$(“span”).text(i+=1);});</td>
+</tr>
+<tr>
+<td>keyup</td>
+<td>当按钮被松开时，发生 keyup 事件。它发生在当前获得焦点的元素上。</td>
+<td>$(“input”).keyup(function(){$(“input”).css(“color”,”#D6D6FF”);});</td>
+</tr>
+</tbody>
+</table>
+<h2 id="标签的添加删除"><a href="#标签的添加删除" class="headerlink" title="标签的添加删除"></a>标签的添加删除</h2><ul>
+<li><p>添加元素：</p>
+<ul>
+<li><p>append() - 在被选元素的尾部插入内容</p>
+</li>
+<li><p>appendTo() – 在被选元素的结尾（仍然在内部）插入指定内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(“p”).append(“ World.”);</div><div class="line">//如p标签的原文本为:“Hello”</div><div class="line">//则现文本为： Hello World.等同于</div><div class="line">$(&quot;&lt;b&gt;World.&lt;/b&gt;&quot;).appendTo(&quot;p&quot;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>添加元素</p>
+<ul>
+<li><p>prepend() - 在被选元素的开头插入内容</p>
+</li>
+<li><p>prependTo() - 在被选元素的开头（仍位于内部）插入指定内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(“p”).prepend(“ 你好，”);</div><div class="line">//如p标签的原文本为:“ 李明”</div><div class="line">//则现文本为： 你好，李明等同于</div><div class="line">//$(&quot;你好&quot;).prependTo(&quot;p&quot;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>添加元素</p>
+<ul>
+<li><p>append()和prepend()方法添加若干新元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function appendText() &#123;</div><div class="line">var txt1=“&lt;p&gt;Text.&lt;/p&gt;”; // 以 HTML 创建新元素</div><div class="line">var txt2=$(“&lt;p&gt;&lt;/p&gt;”).text(“Text.”); // 以 jQuery 创建新元素</div><div class="line">var txt3=document.createElement(“p”); // 以DOM 创建新元素</div><div class="line">txt3.innerHTML=&quot;Text.&quot;;</div><div class="line">$(&quot;p&quot;).append(txt1,txt2,txt3); // 追加新元素 </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>添加元素</p>
+<ul>
+<li>after() – 在被选元素之后插入内容</li>
+<li>before – 在被选元素之前插入内容</li>
+</ul>
+</li>
+<li><p>after()和before() 方法添加若干新元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function afterText() &#123;</div><div class="line">var txt1=“&lt;b&gt;I &lt;/b&gt;”; // 以 HTML 创建新元素</div><div class="line">var txt2=$(“&lt;i&gt;&lt;/i&gt;”).text(“love ”); // 通过 jQuery 创建新元素</div><div class="line">var txt3=document.createElement(“big”); // 通过 DOM 创建新元素</div><div class="line">txt3.innerHTML=&quot;jQuery!&quot;;</div><div class="line">$(&quot;img&quot;).after(txt1,txt2,txt3); // 在 img 之后插入新元素</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="思考问题："><a href="#思考问题：" class="headerlink" title="思考问题："></a>思考问题：</h4><blockquote>
+<p>append()和preappend()与after()和before()区别：<br>append() &amp; prepend()是在元素内插入内容（该内容变成该元素的子元素或节点）<br>after() &amp; before()是在元素的外面插入内容（其内容变成元素的兄弟节点）</p>
+</blockquote>
+<ul>
+<li><p>删除元素</p>
+<ul>
+<li><p>remove() - 删除被选元素（及其子元素）</p>
+<blockquote>
+<p>例：$(“#div1”).remove(); //删除的是div1的</p>
+</blockquote>
+</li>
+<li><p>remove() – 过滤被删除的元素</p>
+<blockquote>
+<p>remove() 方法也可接受一个参数，允许被删元素进行过滤。该参数可以是任何 jQuery 选择器的语法。<br><code>$(“p”).remove(“.italic”);//删除 class=&quot;italic&quot; 的所有 &lt;p&gt; 元素</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>删除元素</p>
+<ul>
+<li>removeAttr()从被选元素中移除属性<br>例：$(“p”).removeAttr(“id”);</li>
+</ul>
+</li>
+</ul>
+<h2 id="属性的获取设置"><a href="#属性的获取设置" class="headerlink" title="属性的获取设置"></a>属性的获取设置</h2><ul>
+<li><p>设置内容 – text() 、 html()、以及val()</p>
+<ul>
+<li><p>获取内容语法：$(selector).text()</p>
+</li>
+<li><p>设置内容语法：$(selector).text(“设置内容” )</p>
+<blockquote>
+<p>其它两个方法语法一样</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>text()、 html() 以及 val()的回调函数<br>回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(&quot;#btn1&quot;).click(function()&#123;</div><div class="line">$(&quot;#test1&quot;).text(function(i,origText)&#123;</div><div class="line">return &quot;Old text: &quot; + origText + &quot; New text: Hello &quot; +</div><div class="line">&quot; world! (index: &quot; + i + &quot;)&quot;;</div><div class="line">&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>获取属性或设置属性 – attr()<ul>
+<li>获取属性语法：$(selector).attr(“ 属性名” )</li>
+<li>设置属性语法：$(selector).attr(“属性名”，“属性值” )</li>
+</ul>
+</li>
+<li>attr()的回调函数<ul>
+<li>回调函数有两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串<code>$(&quot;button&quot;).click(function(){$(&quot;#taobao&quot;).attr(&quot;href&quot;, function(i,origValue){return origValue + &quot;/market/nvzhuang&quot;;});});</code></li>
+</ul>
+</li>
+<li>css()方法设置或返回被选元素的一个或多个样式属性。<ul>
+<li>返回CSS属性：<br>语法：css(“ 属性名” )<br>例：$(“p”).css(“color”)</li>
+<li>设置CSS属性：<br>语法：css(“ 属性名”，“属性值” )<br>例：$(“p”).css(“color” ，”#f00”)</li>
+<li>设置多个CSS属性：<br>语法：css({“ 属性名”:“ 属性值” ,属性名”:“ 属性值” ,…})<br>例 $(“p”).css({“color”:”#f00”,”background”:”#00f”)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Class的添加删除"><a href="#Class的添加删除" class="headerlink" title="Class的添加删除"></a>Class的添加删除</h2><ul>
+<li><p>addClass() – 向被选元素中添加一个或多个class类</p>
+</li>
+<li><p>removeClass() – 从被选元素删除一个或多个class类与addClass()用法相同</p>
+</li>
+<li><p>toggleClass() – 对被选元素进行添加/删除class类的切换操作</p>
+<blockquote>
+<p>该方法是对addClass()和removeClass()方法的切换</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="jQuery编写图片轮播"><a href="#jQuery编写图片轮播" class="headerlink" title="jQuery编写图片轮播"></a>jQuery编写图片轮播</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Math 对象" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/18/Math 对象/" class="article-date">
+      <time datetime="2017-10-18T13:26:57.000Z" itemprop="datePublished">2017-10-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/18/Math 对象/">Math 对象</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Math-对象"><a href="#Math-对象" class="headerlink" title="Math 对象"></a>Math 对象</h1><ol>
+<li><p>作用：</p>
+<blockquote>
+<p>Javascript中，Math 对象是用于执行数学任务的对象(取整、取余。)</p>
+</blockquote>
+</li>
+<li><p>访问语法：MAth.属性名</p>
+<blockquote>
+<p>注释：Math 对象并不像 Date 和 String 那样是对象的类，因此没有构造函数 Math()，像 Math.sin() 这样的函数只是函数，不是某个对象的方法。您无需创建它，通过把 Math 作为对象使用就可以调用其所有属性和方法。</p>
+</blockquote>
+</li>
+<li><p>属性和方法</p>
+<ul>
+<li>abs(x)返回数的绝对值</li>
+<li>ceil(x)对数进行上取整</li>
+<li>floor(x)对数进行下取整</li>
+<li>max(x,y)返回 x 和 y 中的最高值</li>
+<li>min(x,y)返回 x 和 y 中的最低值</li>
+<li>round(x)把数四舍五入为最接近的整数</li>
+<li>pow(x,y)返回 x 的 y 次幂</li>
+<li>random()返回 0 ~ 1 之间的随机数</li>
+<li>sqrt(x)返回数的平方根</li>
+</ul>
+</li>
+</ol>
+<h1 id="Date-对象"><a href="#Date-对象" class="headerlink" title="Date 对象"></a>Date 对象</h1><ol>
+<li><p>作用 :</p>
+<blockquote>
+<p>Javascript中， Date 对象用于处理日期和时间</p>
+</blockquote>
+</li>
+<li><p>创建 Date 对象的语法：</p>
+<blockquote>
+<p><code>var myDate=new Date()</code></p>
+</blockquote>
+</li>
+<li><p>属性</p>
+<ul>
+<li>constructor返回对创建此对象的 Date 函数的引用</li>
+<li>prototype使您有能力向对象添加属性和方法。</li>
+</ul>
+</li>
+<li><p>获取时间方法 ：</p>
+<ul>
+<li>Date()返回当日的日期和时间</li>
+<li>getDate()从 Date 对象返回一个月中的某一天 (1 ~ 31)</li>
+<li>getDay()从 Date 对象返回一周中的某一天 (0 ~ 6)</li>
+<li>getMonth()从 Date 对象返回月份 (0 ~ 11)</li>
+<li>getFullYear()从 Date 对象以四位数字返回年份</li>
+<li>getHours()返回 Date 对象的小时 (0 ~ 23)</li>
+<li>getMinutes()返回 Date 对象的分钟 (0 ~ 59)</li>
+<li>getSeconds()返回 Date 对象的秒数 (0 ~ 59)</li>
+<li>getMilliseconds()返回 Date 对象的毫秒(0 ~ 999)</li>
+<li>getTime()返回 1970 年 1 月 1 日至今的毫秒数<br><strong>获取时间的其他方法</strong></li>
+<li>getTimezoneOffset()返回本地时间不格林威治标准时间(GMT) 的分钟差</li>
+<li>getUTCDate()根据世界时从Date 对象返回月中的一天 (1~31)</li>
+<li>getUTCDay()根据世界时从 Date 对象返回周中的一天 (0 ~ 6)</li>
+<li>getUTCMonth()根据世界时从 Date 对象返回月份 (0 ~ 11)</li>
+<li>getUTCFullYear()根据世界时从 Date 对象返回四位数的年份</li>
+<li>getUTCHours()根据世界时返回 Date 对象的小时 (0 ~ 23)</li>
+<li>getUTCMinutes()根据世界时返回 Date 对象的分钟 (0 ~ 59)</li>
+<li>getUTCSeconds()根据世界时返回 Date 对象的秒钟 (0 ~ 59)</li>
+<li>getUTCMilliseconds()根据世界时返回 Date 对象的毫秒(0~ 999)</li>
+<li>parse()返回1970年1月1日午夜到指定日期（字符串）的毫秒数</li>
+</ul>
+</li>
+<li><p>设置时间方法：</p>
+<ul>
+<li>setHours()设置 Date 对象中的小时 (0 ~ 23)</li>
+<li>setMinutes()设置 Date 对象中的分钟 (0 ~ 59)</li>
+<li>setSeconds()设置 Date 对象中的秒钟 (0 ~ 59)</li>
+<li>setMilliseconds()设置 Date 对象中的毫秒 (0 ~ 999)</li>
+<li>setTime()以毫秒设置 Date 对象<br><strong>设置时间的其他方法</strong></li>
+<li>setUTCDate()根据世界时设置 Date 对象中月份的一天 (1 ~ 31)</li>
+<li>setUTCMonth()根据世界时设置 Date 对象中的月份 (0 ~ 11)</li>
+<li>setUTCFullYear()根据世界时设置 Date 对象中的年份（四位数字）</li>
+<li>setUTCHours()根据世界时设置 Date 对象中的小时 (0 ~ 23)</li>
+<li>setUTCMinutes()根据世界时设置 Date 对象中的分钟 (0 ~ 59)</li>
+<li>setUTCSeconds()根据世界时设置 Date 对象中的秒钟 (0 ~ 59)</li>
+<li>setUTCMilliseconds()根据世界时设置 Date 对象中的毫秒 (0 ~ 999)</li>
+</ul>
+</li>
+<li><p>Date的其他方法:</p>
+<ul>
+<li>toSource()返回该对象的源代码</li>
+<li>toString()把 Date 对象转换为字符串</li>
+<li>toTimeString()把 Date 对象的时间部分转换为字符串</li>
+<li>toDateString()把 Date 对象的日期部分转换为字符串</li>
+<li>toUTCString()根据世界时，把 Date 对象转换为字符串。</li>
+<li>toLocaleString()根据本地时间格式，把 Date 对象转换为字符串。</li>
+<li>toLocaleTimeString()根据本地时间格式，把 Date 对象的时间部分转换为字符串</li>
+<li>toLocaleDateString()根据本地时间格式，把 Date 对象的日期部分转换为字符串。</li>
+<li>UTC()根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。</li>
+<li>valueOf()返回 Date 对象的原始值</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS字符串操作" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/17/JS字符串操作/" class="article-date">
+      <time datetime="2017-10-17T13:26:57.000Z" itemprop="datePublished">2017-10-17</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/17/JS字符串操作/">JS字符串操作</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="JS字符串操作"><a href="#JS字符串操作" class="headerlink" title="JS字符串操作"></a><strong>JS字符串操作</strong></h1><blockquote>
+<p><strong>“字符串对象”是Javascript内置的字符块处理对象，用于定义及处理字符串。</strong></p>
+</blockquote>
+<ol>
+<li><p><strong>声明字符串的两种方法:</strong></p>
+<ul>
+<li><strong><code>var str1 = &quot;string1&quot; ;</code></strong></li>
+<li><strong><code>var str2 = new String(&quot;string2&quot;);</code></strong></li>
+</ul>
+<blockquote>
+<p><strong>两种方式的差别:str1是一个字符串，类型是string ，而str2则是对象“ string2”的引用，类型是对象。如果引用被修改，str2也会被修改</strong></p>
+</blockquote>
+</li>
+<li><p><strong>字符串操作方法</strong></p>
+<ol>
+<li><strong>charAt() 返回指定位置的字符</strong></li>
+<li><strong>charCodeAt() 返回指定位置的字符的Unicode编码</strong></li>
+<li><strong>search() 用于检索字符串中指定的子字符串</strong></li>
+<li><strong>replace() 查找匹配指定的字符串，然后用新字符串代替匹配的字符串</strong></li>
+<li><strong>concat() 将两个或多个字符的文本组合起来，返回一个新的字符串</strong></li>
+<li><strong>使用加号链接字符串。 newStr = “string1”+”string2”</strong></li>
+<li><strong>indexOf() 返回字符串中一个子串第一处出现的索引。如果没有匹配项，返回 -1</strong></li>
+<li><strong>lastIndexOf() 返回字符串中一个子串最后一处出现的索引，如果没有匹配项，返回 -1</strong></li>
+<li><strong>slice() 提取字符串的一部分，并返回一个新字符串。两个参数，第一个为起始位置，第二个为终止位置（留头不留尾），如果没有end，就取到末尾</strong></li>
+<li><strong>substring() 返回字符串的一个子串。传入参数是起始位置和结束位置。（留头不留尾），如果没有end，就取到末尾</strong></li>
+<li><strong>split() 通过将字符串划分成子串，将一个字符串做成一个字符串数组。</strong></li>
+<li><strong>Length 返回字符串的长度（其包含的字符的个数）</strong></li>
+<li><strong>toLowerCase() 将整个字符串转成小写字母</strong></li>
+<li><strong>toUpperCase() 将整个字符串转成大写字母</strong></li>
+<li><strong>转义字符 \</strong><br><strong>我们平时想输出一个双引号（“”）我们会这样写：</strong><br><strong><code>document.write(“””);</code></strong><br><strong>但是这样写是错诨的,所以我们需要用到转义字符：</strong><br><strong><code>document.write(“ \””);</code></strong></li>
+</ol>
+</li>
+</ol>
+<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a><strong>JSON</strong></h1><blockquote>
+<p><strong>JSON，全称是JavaScript Object Notation。它是基于JavaScript编程诧言ECMA-262 3rd EditionDecember 1999标准的一种轻量级的数据交换格式，主要用于跟服务器进行交换数据。跟XML相类似，它独立诧言，在跨平台数据传输上有很大的优势。</strong></p>
+</blockquote>
+<ol>
+<li><p><strong>JSON的书写格式：</strong></p>
+<ol>
+<li><p><strong>格式一：<code>{ “name”:“ xiaoming”, “age”:“22”, “email”:&quot;jone@163.com&quot; };</code></strong></p>
+<ol>
+<li><strong>格式二:</strong>                        </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">&quot;name&quot;:&quot;xiaoming&quot;,  </div><div class="line">&quot;age&quot;:&quot;22&quot;,  </div><div class="line">&quot;friends&quot;:[  </div><div class="line">	&#123;&quot;name&quot;:&#123;&quot;firstName&quot;:&quot;liu&quot;,&quot;lastName&quot;:&quot;wei&quot;&#125;,&quot;age&quot;:&quot;23&quot;&#125;,  </div><div class="line">	&#123;&quot;name&quot;:&#123;&quot;firstName&quot;:&quot;li&quot;,&quot;lastName&quot;:&quot;mei&quot;&#125;,&quot;age&quot;:&quot;27&quot;&#125;  </div><div class="line">]  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>取值</strong></p>
+<ul>
+<li><strong>用“点”来取得相应的值，如<code>JSON.name</code></strong></li>
+</ul>
+</li>
+<li><p><strong>JSON和字符串之间转换</strong></p>
+<ol>
+<li><strong>JSON.stringify(json)</strong></li>
+<li><strong>JSON.parse(str)</strong></li>
+</ol>
+</li>
+<li><p><strong>JSON拷贝</strong></p>
+<blockquote>
+<p><strong>深拷贝,浅拷贝</strong></p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="This-关键字"><a href="#This-关键字" class="headerlink" title="This 关键字"></a><strong>This 关键字</strong></h1><ol>
+<li><p><strong>this概念 :</strong></p>
+<ol>
+<li><p><strong>this是Javascript诧言的一个关键字它代表函数运行时，自劢生成的一个内部对象，只能在函数内部使用</strong></p>
+</li>
+<li><p><strong>三种情况下的this指向:</strong></p>
+<ol>
+<li><strong>纯粹的函数调用: this指向调用函数的对象</strong></li>
+<li><strong>作为对象方法的调用: this指向调用这个方法的对象</strong></li>
+<li><strong>作为构造函数调用: this指向构造函数的实例</strong></li>
+</ol>
+</li>
+<li><p><strong>修改this指向:</strong></p>
+<ol>
+<li><p><strong>使用call()方法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. 语法：call(thisObj，Object)</div><div class="line">2. 定义：调用一个对象的一个方法，以另一个对象替换当前对象</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>使用apply()方法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. 语法：apply(thisObj，[argArray])</div><div class="line">2.  定义：应用某一对象的一个方法，用另一个对象替换当前对象</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p><strong>使用new关键字</strong></p>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS 对象 类,定时器" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/16/JS 对象 类,定时器/" class="article-date">
+      <time datetime="2017-10-16T08:26:57.000Z" itemprop="datePublished">2017-10-16</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/16/JS 对象 类,定时器/">JS函数,对象/类,定时器</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="JS函数-对象-类-定时器"><a href="#JS函数-对象-类-定时器" class="headerlink" title="JS函数,对象/类,定时器"></a><strong>JS函数,对象/类,定时器</strong></h1><h2 id="JS函数"><a href="#JS函数" class="headerlink" title="JS函数"></a><strong>JS函数</strong></h2><ul>
+<li><p><strong>JavaScript函数定义：</strong></p>
+<blockquote>
+<p><strong>不带参数的函数</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function functionname()</div><div class="line">&#123;</div><div class="line">//这里是要执行的代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong><code>&gt; 带参数的函数function myFunction(var1,var2){//这里是要执行的代码}&gt; 调用不带参数的函数</code>myFunction()<code>&gt; 调用带参数的函数</code>myFunction(argument1,argument2)`</strong>在调用函数时，您可以向其传递值，这些值被称为参数。您可以发送任意多的参数，由逗号 (,) 分隔<strong>`</strong></p>
+<ul>
+<li><p><strong>带有返回值的函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function myFunction()</div><div class="line">&#123;</div><div class="line">var x=5;</div><div class="line">return x;</div><div class="line">&#125;</div><div class="line">var myVar=myFunction();</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>myVar 变量的值是 5也就是上面的函数返回值5</strong></p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p><strong>匿名函数(匿名函数就是没有实际名字的函数)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//匿名函数</div><div class="line">(function() &#123;</div><div class="line">alert(&apos;water&apos;);</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>匿名函数的调用</strong></p>
+<blockquote>
+<p><strong>要调用一个函数，我们必须要有方法定位它，引用它。所以，我们会需要帮它找一个名字。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt; var abc=function(x,y)&#123;</div><div class="line">&gt; return x+y;</div><div class="line">&gt; &#125;</div><div class="line">&gt; alert(abc(2,3));</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="JS对象-类"><a href="#JS对象-类" class="headerlink" title="JS对象/类"></a><strong>JS对象/类</strong></h2><ul>
+<li><p><strong>对象:</strong></p>
+<ul>
+<li><p><strong>面向对象编程的核心</strong></p>
+</li>
+<li><p><strong>表示现实世界中的实体</strong></p>
+</li>
+<li><p><strong>为计算机应用程序提供实用基础</strong></p>
+</li>
+<li><p><strong>完成特定任务</strong></p>
+<blockquote>
+<p><strong>对象是存在的具体实体，具有明确定义的状态和行为。</strong><br><strong>对象：用来描述客观事物的一个实体，由一组属性和方法构成</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>类</strong></p>
+<blockquote>
+<p><strong>具有相同属性和方法的一组对象的集合类是对象的类型</strong><br><strong>类是模子，确定对象将会拥有的特征（属性）和行为（方法）</strong></p>
+</blockquote>
+<ul>
+<li><p><strong>类的创建</strong></p>
+</li>
+<li><p>​</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function class1()&#123;</div><div class="line">//类成员的定义及构造函数</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>创建一个学生类</strong></p>
+</li>
+<li><p><strong>每个学生都有年龄、姓名、班级和爱好。用类的思想编写学生类</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Students (name,age,grade,hobby)&#123;</div><div class="line">this.name=name; //姓名</div><div class="line">this. age=age; //年龄</div><div class="line">this. grade=grade; //班级</div><div class="line">this. Hobby=hobby; //爱好</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>为Students引用类型创建几个属性getName和setName方法：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Students.prototype.getName=function()&#123;</div><div class="line">return this.name;</div><div class="line">&#125;</div><div class="line">Students.prototype.setName=function(name)&#123;</div><div class="line">this.name=name;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>创建和使用引用类型的实例</strong></p>
+<blockquote>
+<p><strong>创建对象语法：var 对象名 = new 类名();</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// 使用对象示例：</div><div class="line">var Student01=new Students(&quot;张三&quot;,&quot;20&quot;,&quot;2&quot;,&quot;唱歌&quot;);</div><div class="line">var Student02=new Students(&quot;李四&quot;,&quot;30&quot;,&quot;3&quot;,&quot;跳舞&quot;)</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>引用对象成员：使用“ .” 进行以下操作 类的创建不引用</strong></p>
+<blockquote>
+<p><strong>属性：对象名.属性</strong><br><strong>方法：对象名.方法名()</strong></p>
+</blockquote>
+</li>
+<li><p><strong>调用getName ()方法及age属性等，并将结果输出到页面上：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.write(&quot;我叫：&quot;+Student01.getName()+&quot;年龄:&quot;+Student01.age+&quot;,所在班级：&quot;+Student01.getGrade()+&quot;，我的爱好是：&quot;+Student01.getHobby()+&quot;。 &quot;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="JS定时器"><a href="#JS定时器" class="headerlink" title="JS定时器"></a><strong>JS定时器</strong></h2><blockquote>
+<p><strong>JavaScript中有两类计时器，即一次性计时器和定期</strong><br><strong>触发计时器。</strong></p>
+<p><strong>一次性计时器仅在指定的时间后触发一次(<code>setTimeout()</code>)</strong><br><strong>定期触发计时器是每隔一定时间就触发一次(<code>setInterval()</code>)</strong></p>
+</blockquote>
+<ul>
+<li><p><strong>一次性计时器：</strong></p>
+<ul>
+<li><p><strong>使用window对象的setTimeout()方法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Window.setTimeout(“function()&#123;&#125;”,delay)</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>setTimeout()方法接收两参数，第一个是要执行的JavaScript代码，可以是一个函数，也可以是几个函数，函数间用“；”隔开即可。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//页面加载3秒后触发的计时器</div><div class="line">function hello()&#123;</div><div class="line">alert(&quot;hello&quot;);</div><div class="line">&#125;</div><div class="line">window.setTimeout(hello,3000);</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>清除定时器</strong></p>
+<ul>
+<li><strong><code>clearTimeout(定时器id)</code></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>定期触发计时器</strong></p>
+<blockquote>
+<p><strong>setInterval()方法的参数不setTimeout()方法相同，但第二</strong><br><strong>个参数丌是计时器触发前的时间，而是计时器的触发间隔，</strong><br><strong>该间隔以毫秒为单位。</strong><br><strong><code>Var myTimerID=setInterval(“ myFunction(){}”,5000);</code></strong></p>
+</blockquote>
+<ul>
+<li><strong>清除定时器</strong><br><strong><code>window.clearInterval(timer2)</code></strong></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>两者的区别在: 一个只执行一次,另一个没过一段时间就 执行一次;</strong></p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h2><ul>
+<li><p><strong>函数</strong></p>
+<blockquote>
+<p><strong>不带参数的函数,带参数的函数,匿名函数,函数返回值</strong></p>
+</blockquote>
+</li>
+<li><p><strong>对象, 类</strong></p>
+<blockquote>
+<p><strong>概念,创建,使用</strong></p>
+</blockquote>
+</li>
+<li><p><strong>定时器</strong></p>
+<blockquote>
+<p><strong>概念,创建,使用<code>setTimeout(), clearTimeout(),setInterval(),clearIearval()</code></strong></p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-javascript 数组" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/15/javascript 数组/" class="article-date">
+      <time datetime="2017-10-15T13:30:16.000Z" itemprop="datePublished">2017-10-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/15/javascript 数组/">javascript 数组</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="javascript-数组"><a href="#javascript-数组" class="headerlink" title="javascript 数组"></a><strong>javascript 数组</strong></h1><h2 id="定义数组"><a href="#定义数组" class="headerlink" title="定义数组"></a><strong>定义数组</strong></h2><h3 id="一维数组创建语法："><a href="#一维数组创建语法：" class="headerlink" title="一维数组创建语法："></a><strong>一维数组创建语法：</strong></h3><blockquote>
+<p><strong><code>var 数组名称 = new Array([size]);</code></strong><br><strong>[size] 表示数组中可存放的元素总数或值([ 该选项可选可不选])</strong></p>
+</blockquote>
+<ul>
+<li><p><strong>方法1</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var fruit = new Array( );</div><div class="line">fruit[0]=“apple”</div><div class="line">fruit[1]=“orange”</div><div class="line">fruit[2]=“peach”</div><div class="line">fruit[3]=&quot;bananer&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>方法2</strong></p>
+<blockquote>
+<p><strong><code>var fruit= new Array(&quot;apple&quot;, &quot;orange&quot;, &quot; peach&quot;,&quot;bananer&quot;) //指定数组长度，数组元素赋值</code></strong></p>
+</blockquote>
+</li>
+<li><p><strong>方法3</strong></p>
+<ul>
+<li><strong>指定长度小于数组元素实际数量</strong></li>
+<li><strong>制定长度大于数组元素实际数量</strong></li>
+</ul>
+</li>
+<li><p><strong>方法四：推荐使用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr4 = [false,&quot;aaa&quot;,123];</div><div class="line">alert(arr4);//false,aaa,123</div></pre></td></tr></table></figure>
+<ol>
+<li><strong>数组内可以存放任意类型的数据</strong></li>
+<li><strong>数组元素不赋值，则为undefined</strong></li>
+<li><strong>打印数组时，如果某个元素没有赋值，则为“”</strong></li>
+<li><strong>访问数组范围以外的元素时，不会出现越界异常，为undefined</strong></li>
+<li><strong>定义的数组大小，依然可以添加更多的元素</strong></li>
+</ol>
+</li>
+</ul>
+<h3 id="二维数组创建语法："><a href="#二维数组创建语法：" class="headerlink" title="二维数组创建语法："></a><strong>二维数组创建语法：</strong></h3><ul>
+<li><p><strong>语法1: <code>var arr = new Array([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;],[&#39;d&#39;,&#39;e&#39;]); arr[0]</code>返回第一个一维数组，arr[0][0]返回第一个一维数组的第一个元素‘ a’</strong></p>
+<blockquote>
+<p><strong>二维数组可以理解为一个存放数据内容为一维数组的一维数组</strong></p>
+</blockquote>
+</li>
+<li><p><strong>二维数组创建语法：</strong></p>
+<ul>
+<li><p><strong>语法二:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> var arr = new Array();</div><div class="line">arr[0]= new Array();</div><div class="line">arr[0][0]= “a”;</div><div class="line">arr[0][1]= “b”;</div><div class="line">arr[0][2]= “c”;</div><div class="line">arr[1]= new Array();</div><div class="line">arr[1][0]= “c”;</div><div class="line">arr[1][1]= “d”;</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>javascript的数组不需要设定长度，会自己迚行扩展</strong></p>
+<h2 id="访问数组"><a href="#访问数组" class="headerlink" title="访问数组"></a><strong>访问数组</strong></h2></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="访问数组代码："><a href="#访问数组代码：" class="headerlink" title="访问数组代码："></a><strong>访问数组代码：</strong></h3><ul>
+<li><strong>一维数组：<code>document.write(fruit[0]); 输出：apple</code></strong></li>
+<li><strong>二维数组：<code>document.write(arr[0][0]); 输出：a</code></strong></li>
+</ul>
+<h3 id="修改已有数组中的值"><a href="#修改已有数组中的值" class="headerlink" title="修改已有数组中的值"></a><strong>修改已有数组中的值</strong></h3><p><strong><code>fruit[0]=“pear”document.write(fruit[0])输出：pear</code></strong></p>
+<h3 id="数组的便利"><a href="#数组的便利" class="headerlink" title="数组的便利"></a><strong>数组的便利</strong></h3><blockquote>
+<p><strong>利用for语句访问数组中的元素值</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">方法一：</div><div class="line">var arr = new</div><div class="line">Array(13.5,3,4,5,6);</div><div class="line">for(var i=0;i&lt;arr.length;i++)&#123;</div><div class="line">alert(arr[i])</div><div class="line">&#125;</div><div class="line">方法二：</div><div class="line">方法二：</div><div class="line">var x</div><div class="line">var mycars = new Array()</div><div class="line">mycars[0] = &quot;Saab&quot;</div><div class="line">mycars[1] = &quot;Volvo&quot;</div><div class="line">mycars[2] = &quot;BMW&quot;</div><div class="line">for (x in mycars)&#123;</div><div class="line">document.write(mycars[x])</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="数组的常用属性和方法"><a href="#数组的常用属性和方法" class="headerlink" title="数组的常用属性和方法"></a><strong>数组的常用属性和方法</strong></h2><ul>
+<li><p><strong>数组常用属性—length属性 数组属性</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">length</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>设置或返回数组中元素的数目，该属性的值始终从数值上大于所属数组的任何一个索引号</strong></li>
+</ul>
+</li>
+<li><p><strong>修改数组的length对数组索引的影响</strong></p>
+<ul>
+<li><strong>手动增大length属性不影响索引</strong></li>
+<li><strong>手动减少length属性会截掉多余的索引</strong></li>
+</ul>
+</li>
+<li><p><strong>修改索引对length属性的影响</strong></p>
+<ul>
+<li><strong>增大数组最大索引号会增大length属性</strong></li>
+</ul>
+</li>
+<li><p><strong>删除索引号最大的索引属性不会影响length属性</strong></p>
+</li>
+</ul>
+<p><strong>###数组常用的方法： 数组方法</strong></p>
+<ul>
+<li><p><strong>join( ) ：把数组的所有元素放入一个字符串，通过一个的分隔符</strong><br><strong>进行分隔</strong></p>
+</li>
+<li><p><strong>pop( )：删除并返回数组的最后一个元素</strong></p>
+</li>
+<li><p><strong>push( )：向数组的末尾添加一个或更多元素，并返回新的长度</strong></p>
+</li>
+<li><p><strong>shift()：删除并返回数组的第一个元素</strong></p>
+</li>
+<li><p><strong>unshift()：向数组的开头添加一个或更多元素，并返回新的长度数组的常用属性和方法</strong></p>
+</li>
+<li><p><strong>reverse()：颠倒数组中元素的顺序</strong></p>
+</li>
+<li><p><strong>sort( )：对数组的元素进行排序</strong></p>
+</li>
+<li><p><strong>concat():连接两个或更多的数组，并返回结果。</strong></p>
+</li>
+<li><p><strong>slice():从某个已有的数组返回选定的元素</strong></p>
+</li>
+<li><p><strong>splice():删除元素，并向数组添加新元素</strong></p>
+<h2 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a><strong>多维数组</strong></h2><blockquote>
+<p><strong>数组分为一维数组和多维数组二维数组及以上的都称为多维数组，上面我们讲解了一维数组，下面我们例举一下多维数组，以二维数组为例。</strong></p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[</div><div class="line">[&quot;Name0&quot;, &quot;Age0&quot;, &quot;Address0&quot;],</div><div class="line">[&quot;Name1&quot;, &quot;Age1&quot;, &quot;Address1&quot;],</div><div class="line">[&quot;Name2&quot;, &quot;Age2&quot;, &quot;Address2&quot;]</div><div class="line">]</div></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>二维数组的创建：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Var personnel = new Array();</div><div class="line">Personnel[0]= new Array();</div><div class="line">Personnel[0][0]= “Name0”;</div><div class="line">Personnel[0][1]= “Age0”;</div><div class="line">Personnel[0][2]= “Address0”;</div><div class="line">Personnel[1]= new Array();</div><div class="line">Personnel[1][0]= “Name1”;</div><div class="line">Personnel[1][1]= “Age1”;</div><div class="line">Personnel[1][2]= “Address1”;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//方法2</div><div class="line">Var aa=new Array(); //定义一维数组</div><div class="line">for(i=1;i&lt;=10;i++)</div><div class="line">&#123;</div><div class="line">	aa[i]=new Array(); //将每一个子元素又定义为数组</div><div class="line">for(n=0;n&lt;=10;n++)</div><div class="line">&#123;</div><div class="line">aa[i][n]=i+n; //此时aa[i][n]可以看作是一个二维数 组</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>还可创建三维数组，四维五维甚至一百维的，但是维数越多越复杂，超过二维的很少使用，下面演示了一个五维数组的声明和访问：</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var myArray=new Array();</div><div class="line">myArray[0]=new Array();</div><div class="line">myArray[0][0]=new Array();</div><div class="line">myArray[0][0][0]=new Array();</div><div class="line">myArray[0][0][0][0]=new Array();</div><div class="line">	myArray[0][0][0][0][0]=“This is getting out of hand”</div><div class="line">Document.write(myArray[0][0][0][0][0]);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="数组的排序"><a href="#数组的排序" class="headerlink" title="数组的排序"></a><strong>数组的排序</strong></h2><ul>
+<li><p><strong>sort()方法是按照字符编码的顺序进行排序</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function sortNumber(a,b)</div><div class="line">&#123;</div><div class="line">return a - b</div><div class="line">&#125;</div><div class="line">var arr = new Array(6)</div><div class="line">arr[0] = &quot;10&quot;</div><div class="line">arr[1] = &quot;5&quot;</div><div class="line">arr[2] = &quot;40&quot;</div><div class="line">arr[3] = &quot;25&quot;</div><div class="line">arr[4] = &quot;1000&quot;</div><div class="line">arr[5] = &quot;1&quot;</div><div class="line">document.write(arr + &quot;&lt;br /&gt;&quot;)</div><div class="line">document.write(arr.sort(sortNumber))</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>输出10,5,40,25,1000,1</strong><br><strong>1,5,10,25,40,1000</strong></p>
+</blockquote>
+</li>
+<li><p><strong>冒泡排序</strong></p>
+<p><strong><code>//冒泡排序法一:function sort(elements){for(var i=0;i&lt;elements.length-1;i++){for(var j=0;j&lt;elements.length-i-1;j++){if(elements[j]&gt;elements[j+1]){var swap=elements[j];elements[j]=elements[j+1];elements[j+1]=swap;} }}}var elements = [3, 1, 5, 7, 2, 10, 8, 9, 4, 6];document.write(&#39;before: &#39; +elements+&quot;&lt;br/&gt;&quot;);sort(elements);document.write(&#39; after: &#39; + elements);&gt; 输出：before: 3,1,5,7,2,10,8,9,4,      after: 1,2,3,4,5,6,7,8,9,10function bubbleSort(arr) {var i = arr.length, j;var tempExchangVal;while (i &gt; 0) {for (j = 0; j &lt; i - 1; j++) {if (arr[j] &gt; arr[j + 1]) {tempExchangVal = arr[j];      arr[j] = arr[j + 1];arr[j + 1] = tempExchangVal;}}i--;}return arr;}</code></strong></p>
+</li>
+</ul>
+<h1 id="城市二级联动"><a href="#城市二级联动" class="headerlink" title="城市二级联动:"></a><strong>城市二级联动:</strong></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;meta name=&quot;viewport&quot;</div><div class="line">          content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;&gt;</div><div class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</div><div class="line">    &lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;select  id=&quot;gametype&quot;&gt;</div><div class="line">    &lt;option value=&quot;aa&quot;&gt;游戏分类&lt;/option&gt;</div><div class="line">&lt;/select&gt;&lt;/br&gt; </div><div class="line">&lt;/br&gt;</div><div class="line">&lt;/br&gt;</div><div class="line"></div><div class="line">&lt;select  id=&quot;gamelist&quot;&gt;</div><div class="line">    &lt;option&gt;游戏名称&lt;/option&gt;</div><div class="line"></div><div class="line">&lt;/select&gt;</div><div class="line">&lt;script&gt;</div><div class="line"></div><div class="line">     window.onload=function () &#123;</div><div class="line">         var game = new Array( );</div><div class="line"></div><div class="line">         game[&apos;纸牌游戏&apos;]=[&apos;斗地主&apos;, &apos;拖拉机&apos;, &apos;桥牌&apos;, &apos;拱猪&apos;, &apos;打百分&apos;];</div><div class="line">         game[&apos;棋类游戏&apos;]=[&apos;军棋&apos;, &apos;跳棋&apos;, &apos;五子棋&apos;, &apos;围棋&apos;, &apos;中国象棋&apos;, &apos;国际象棋&apos;, &apos;飞行棋&apos;, &apos;黑白棋&apos;];</div><div class="line">         game[&apos;其他游戏&apos;] = [&apos;连连看&apos;, &apos;俄罗斯方块&apos;, &apos;麻将&apos;, &apos;台球&apos;, &apos;挑错&apos;];</div><div class="line"></div><div class="line"></div><div class="line">         //</div><div class="line">         var gametype=document.getElementById(&quot;gametype&quot;)</div><div class="line">         for(var x in game)&#123;</div><div class="line"></div><div class="line">             gametype.add(new Option(x,x))</div><div class="line">         &#125;</div><div class="line">        gametype.onchange=function () &#123;</div><div class="line"></div><div class="line"></div><div class="line">             var  gamelist=document.getElementById(&quot;gamelist&quot;)</div><div class="line">             gamelist.options.length=0;</div><div class="line">             var  gametypevalue=gametype.value;</div><div class="line"></div><div class="line">             for(var j in game)&#123;</div><div class="line">              if(j==gametypevalue)&#123;</div><div class="line"></div><div class="line">                  for(var f=0;f&lt;game[j].length;f++)&#123;</div><div class="line">                      console.log(game[j]);</div><div class="line">                      console.log(game[j][f]);</div><div class="line">                      gamelist.add(new Option(game[j][f],game[j][f]))</div><div class="line">                  &#125;</div><div class="line"></div><div class="line"></div><div class="line">              &#125;</div><div class="line">          &#125;</div><div class="line"></div><div class="line">         &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-数组方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/10/15/数组方法/" class="article-date">
+      <time datetime="2017-10-15T13:26:57.000Z" itemprop="datePublished">2017-10-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/10/15/数组方法/">数组方法</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">			p&#123;</span></div><div class="line"><span class="undefined">				color: red;</span></div><div class="line"><span class="undefined">			&#125;</span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		</div><div class="line">		数组的方法可以用来操作数组;</div><div class="line">		<span class="tag">&lt;<span class="name">h1</span>&gt;</span></div><div class="line">			</div><div class="line">			join();<span class="tag">&lt;<span class="name">br</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>// join  把数组中的元素转换成字符串,并且拼接起来;</div><div class="line">			//把数组转换成字符串,并且默认用逗号分隔;</div><div class="line">			//如果join中括号里面有东西,就用括号中的东西分隔;</div><div class="line">			</div><div class="line">			// join 不会改变原来的数组,返回的是一个新的字符串<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">			pop();<span class="tag">&lt;<span class="name">br</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>//pop( )  删除并返回数组的最后一个元素;</div><div class="line">			</div><div class="line">			// pop()  会改变原来的数组;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">			push();<span class="tag">&lt;<span class="name">br</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">					</div><div class="line">			//shift()   删除并返回数组的第一个元素;</div><div class="line">			//shift 改变原来的数组;</div><div class="line">			<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">			shift();<span class="tag">&lt;<span class="name">br</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">				//shift()   删除并返回数组的第一个元素;</div><div class="line">			//shift 改变原来的数组;</div><div class="line">			<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">			</div><div class="line">			unshift();<span class="tag">&lt;<span class="name">br</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">				// unshift 向数组的开头添加一个或更多元素，并返回新的长度</div><div class="line">			<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">			</div><div class="line">		<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">0</span>];</span></div><div class="line"><span class="javascript">			<span class="comment">//  数组的length属性代表  数组的长度,数组中元素的个数;</span></span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(arr.length);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="comment">// join  把数组中的元素转换成字符串,并且拼接起来;</span></span></div><div class="line"><span class="javascript">			<span class="comment">//把数组转换成字符串,并且默认用逗号分隔;</span></span></div><div class="line"><span class="javascript">			<span class="comment">//如果join中括号里面有东西,就用括号中的东西分隔;</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="comment">// join 不会改变原来的数组,返回的是一个新的字符串</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> joinArr=arr.join();</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			 <span class="built_in">console</span>.log(joinArr);</span></div><div class="line"><span class="javascript">			 <span class="built_in">console</span>.log(arr);</span></div><div class="line"><span class="undefined">			 </span></div><div class="line"><span class="javascript">			<span class="comment">//pop( )  删除并返回数组的最后一个元素;</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="comment">// pop()  会改变原来的数组;</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> popArr=arr.pop();</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="string">"pop的返回值是:"</span>+popArr);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="string">"原来的数组是:"</span>);</span></div><div class="line"><span class="javascript">			 <span class="built_in">console</span>.log(arr);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="comment">// push 向数组的末尾添加一个或更多元素，并返回新的长度</span></span></div><div class="line"><span class="javascript">			<span class="comment">// push  会改变原来的数组;</span></span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> pushArr=arr.push(<span class="string">"aaaa"</span>);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(pushArr);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(arr);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="comment">//shift()   删除并返回数组的第一个元素;</span></span></div><div class="line"><span class="javascript">			<span class="comment">//shift 改变原来的数组;</span></span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> shiftArr=arr.shift();</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(shiftArr);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(arr);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="comment">// unshift 向数组的开头添加一个或更多元素，并返回新的长度</span></span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> unShiftArr=arr.unshift(<span class="string">"bbbb"</span>,<span class="literal">true</span>);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(unShiftArr); </span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(arr);</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">			</span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">		</div><div class="line">		</div><div class="line">		</div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a><a class="article-category-link" href="/categories/学习/动态网页编程/">动态网页编程</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端基础/">前端基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态网页编程/">动态网页编程</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 4;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
