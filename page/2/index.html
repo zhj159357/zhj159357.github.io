@@ -428,151 +428,6 @@
 
 
   
-    <article id="post-DOM对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/12/DOM对象/">DOM</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/12/DOM对象/" class="archive-article-date">
-  	<time datetime="2017-10-12T13:30:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><ul>
-<li>分析DOM节点<code>&lt;html&gt;&lt;head&gt;&lt;title&gt;DOM 教程&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;DOM 第一节&lt;/h1&gt; 、&lt;p&gt;Hello world!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></li>
-</ul>
-<blockquote>
-<p>分析父、子和同胞节点：·<code>&lt;html&gt;</code> 节点没有父节点，它是根节点</p>
-<p><code>&lt;head&gt;</code> 和 <code>&lt;body&gt;</code> 的父节点是<code>&lt;html&gt;</code> 节点 ；文本节点 “ Hello world!”的父节点是 <code>&lt;p&gt;</code> 节点</p>
-</blockquote>
-<ul>
-<li><p>获取节点</p>
-<ul>
-<li>由id获取</li>
-</ul>
-</li>
-</ul>
-<pre><code>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">getElementById</div><div class="line">​</div></pre></td></tr></table></figure>
-
-
-- 语法：`node.getElementById(&quot;id&quot;);`
-- 例: `document.getElementById(&quot;intro&quot;);`
-</code></pre><ul>
-<li>由class获取</li>
-</ul>
-<pre><code>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">getElementsByClassName</div><div class="line">​</div></pre></td></tr></table></figure>
-
-
-- 语法：`node. getElementsByClassName(&quot;class&quot;);`
-- 例：`document. getElementsByClassName(&quot; class &quot;);`
-</code></pre><ul>
-<li>由标签名获取</li>
-</ul>
-<pre><code>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">getElementsByTagName</div><div class="line">​</div></pre></td></tr></table></figure>
-
-
-- 语法：`node. getElementsByTagName(“h1 &quot;);`
-</code></pre><ul>
-<li><p>查看节点类型</p>
-<ul>
-<li><p>语法：</p>
-<blockquote>
-<p><code>nodeObject.[nodeType][nodeName ][nodeValue ]</code></p>
-</blockquote>
-</li>
-<li><p>nodeType 返回以数字值返回指定节点的节点类型。如果节点是元素节点，则返回 1。如果节点是属性节点，则返回 2。</p>
-</li>
-<li><p>nodeName 返回节点名称（大写的标签名）</p>
-</li>
-<li><p>nodeValue 文本节点返回文本内容，其他节点返回null</p>
-        
-          <a class="article-more-a" href="/2017/10/12/DOM对象/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端基础</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">动态网页编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习/动态网页编程//" class="article-tag-list-link color2">动态网页编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/12/DOM对象/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-DOM节点查找  事件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -774,6 +629,151 @@
 
 
   
+    <article id="post-DOM对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/12/DOM对象/">DOM</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/12/DOM对象/" class="archive-article-date">
+  	<time datetime="2017-10-12T13:30:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><ul>
+<li>分析DOM节点<code>&lt;html&gt;&lt;head&gt;&lt;title&gt;DOM 教程&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;DOM 第一节&lt;/h1&gt; 、&lt;p&gt;Hello world!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></li>
+</ul>
+<blockquote>
+<p>分析父、子和同胞节点：·<code>&lt;html&gt;</code> 节点没有父节点，它是根节点</p>
+<p><code>&lt;head&gt;</code> 和 <code>&lt;body&gt;</code> 的父节点是<code>&lt;html&gt;</code> 节点 ；文本节点 “ Hello world!”的父节点是 <code>&lt;p&gt;</code> 节点</p>
+</blockquote>
+<ul>
+<li><p>获取节点</p>
+<ul>
+<li>由id获取</li>
+</ul>
+</li>
+</ul>
+<pre><code>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">getElementById</div><div class="line">​</div></pre></td></tr></table></figure>
+
+
+- 语法：`node.getElementById(&quot;id&quot;);`
+- 例: `document.getElementById(&quot;intro&quot;);`
+</code></pre><ul>
+<li>由class获取</li>
+</ul>
+<pre><code>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">getElementsByClassName</div><div class="line">​</div></pre></td></tr></table></figure>
+
+
+- 语法：`node. getElementsByClassName(&quot;class&quot;);`
+- 例：`document. getElementsByClassName(&quot; class &quot;);`
+</code></pre><ul>
+<li>由标签名获取</li>
+</ul>
+<pre><code>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">getElementsByTagName</div><div class="line">​</div></pre></td></tr></table></figure>
+
+
+- 语法：`node. getElementsByTagName(“h1 &quot;);`
+</code></pre><ul>
+<li><p>查看节点类型</p>
+<ul>
+<li><p>语法：</p>
+<blockquote>
+<p><code>nodeObject.[nodeType][nodeName ][nodeValue ]</code></p>
+</blockquote>
+</li>
+<li><p>nodeType 返回以数字值返回指定节点的节点类型。如果节点是元素节点，则返回 1。如果节点是属性节点，则返回 2。</p>
+</li>
+<li><p>nodeName 返回节点名称（大写的标签名）</p>
+</li>
+<li><p>nodeValue 文本节点返回文本内容，其他节点返回null</p>
+        
+          <a class="article-more-a" href="/2017/10/12/DOM对象/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端基础</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">动态网页编程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习/动态网页编程//" class="article-tag-list-link color2">动态网页编程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/12/DOM对象/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-BOM 对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -930,7 +930,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line">   javascript 数据类型</div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">			//数字类型</span></div><div class="line"><span class="undefined">			var num=3;</span></div><div class="line"><span class="undefined">			console.log(typeof num);</span></div><div class="line"><span class="undefined">			console.log(typeof(typeof num) );</span></div><div class="line"><span class="undefined">			console.log(num/"a");</span></div><div class="line"><span class="undefined">			console.log(typeof(num/"a"));</span></div><div class="line"><span class="undefined">			var str="54sdwe5421ds";</span></div><div class="line"><span class="undefined">			console.log(typeof str)</span></div><div class="line"><span class="undefined">			console.log("aaaaaaaa")</span></div><div class="line"><span class="undefined">			 // console.log(aaaaa) // 变量名  未定义    变量 ，先声明 后使用</span></div><div class="line"><span class="undefined">			//布尔值</span></div><div class="line"><span class="undefined">			var bool=true;</span></div><div class="line"><span class="undefined">			console.log(typeof bool);</span></div><div class="line"><span class="undefined">			/*</span></div><div class="line"><span class="undefined">			 * 在js中，  0代表 falase，  1代表 true</span></div><div class="line"><span class="undefined">			 */			</span></div><div class="line"><span class="undefined">			var unde;						</span></div><div class="line"><span class="undefined">			console.log(unde);			</span></div><div class="line"><span class="undefined">			unde=null;			</span></div><div class="line"><span class="undefined">			console.log(unde)			</span></div><div class="line"><span class="undefined">			var nu=null;</span></div><div class="line"><span class="undefined">			console.log( typeof nu)			</span></div><div class="line"><span class="undefined">			var a;</span></div><div class="line"><span class="undefined">			a=1;</span></div><div class="line"><span class="undefined">			a="b";</span></div><div class="line"><span class="undefined">			var b;									</span></div><div class="line"><span class="undefined">			var obj=&#123;</span></div><div class="line"><span class="undefined">				"name":"李四",</span></div><div class="line"><span class="undefined">				"age":18,</span></div><div class="line"><span class="undefined">				"sex":NaN,</span></div><div class="line"><span class="undefined">				// 键值对</span></div><div class="line"><span class="undefined">			&#125;</span></div><div class="line"><span class="undefined">			console.log(  typeof   obj)			</span></div><div class="line"><span class="undefined">			const a11=5;			</span></div><div class="line"><span class="undefined">		console.log(a11);																	</span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">			</span></div><div class="line"><span class="undefined">			var b;		</span></div><div class="line"><span class="undefined">			var c;			</span></div><div class="line"><span class="undefined">			var d;</span></div><div class="line"><span class="undefined">			//console.log	(a);  //  报错;			</span></div><div class="line"><span class="undefined">			 b=5;</span></div><div class="line"><span class="undefined">			console.log(b);   //  5   	</span></div><div class="line"><span class="undefined">			console.log(c);   //undefined</span></div><div class="line"><span class="undefined">			console.log(d);  // undefined			</span></div><div class="line"><span class="undefined">			 d=5;  </span></div><div class="line"><span class="undefined">			 console.log(d);			</span></div><div class="line"><span class="undefined">			//  声明变量提升机制																</span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">			var a="我是全局中的a";			</span></div><div class="line"><span class="undefined">			function fn()&#123;</span></div><div class="line"><span class="undefined">				console.log(a);  //   </span></div><div class="line"><span class="undefined">				var a="我是局部中的a";</span></div><div class="line"><span class="undefined">				console.log(a);   //  </span></div><div class="line"><span class="undefined">			&#125;		</span></div><div class="line"><span class="undefined">			fn();			</span></div><div class="line"><span class="undefined">			console.log(a);     </span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>	</div><div class="line">作用域</div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">			var a=5;				</span></div><div class="line"><span class="undefined">			function fn()&#123;</span></div><div class="line"><span class="undefined">				var b="我是fn中的b";</span></div><div class="line"><span class="undefined">				console.log("当前作用域没有a,全局作用域中有啊"+a);</span></div><div class="line"><span class="undefined">			&#125;		</span></div><div class="line"><span class="undefined">			fn();</span></div><div class="line"><span class="undefined">            console.log(b);						</span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+        <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line">   javascript 数据类型</div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">			<span class="comment">//数字类型</span></span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> num=<span class="number">3</span>;</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="keyword">typeof</span> num);</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="keyword">typeof</span>(<span class="keyword">typeof</span> num) );</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(num/<span class="string">"a"</span>);</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="keyword">typeof</span>(num/<span class="string">"a"</span>));</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> str=<span class="string">"54sdwe5421ds"</span>;</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="keyword">typeof</span> str)</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="string">"aaaaaaaa"</span>)</span></div><div class="line"><span class="javascript">			 <span class="comment">// console.log(aaaaa) // 变量名  未定义    变量 ，先声明 后使用</span></span></div><div class="line"><span class="javascript">			<span class="comment">//布尔值</span></span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> bool=<span class="literal">true</span>;</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(<span class="keyword">typeof</span> bool);</span></div><div class="line"><span class="undefined">			/*</span></div><div class="line"><span class="javascript">			 * 在js中，  <span class="number">0</span>代表 falase，  <span class="number">1</span>代表 <span class="literal">true</span></span></div><div class="line"><span class="undefined">			 */			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> unde;						</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(unde);			</span></div><div class="line"><span class="javascript">			unde=<span class="literal">null</span>;			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(unde)			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> nu=<span class="literal">null</span>;</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log( <span class="keyword">typeof</span> nu)			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> a;</span></div><div class="line"><span class="undefined">			a=1;</span></div><div class="line"><span class="javascript">			a=<span class="string">"b"</span>;</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> b;									</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> obj=&#123;</span></div><div class="line"><span class="javascript">				<span class="string">"name"</span>:<span class="string">"李四"</span>,</span></div><div class="line"><span class="javascript">				<span class="string">"age"</span>:<span class="number">18</span>,</span></div><div class="line"><span class="javascript">				<span class="string">"sex"</span>:<span class="literal">NaN</span>,</span></div><div class="line"><span class="javascript">				<span class="comment">// 键值对</span></span></div><div class="line"><span class="undefined">			&#125;</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(  <span class="keyword">typeof</span>   obj)			</span></div><div class="line"><span class="javascript">			<span class="keyword">const</span> a11=<span class="number">5</span>;			</span></div><div class="line"><span class="javascript">		<span class="built_in">console</span>.log(a11);																	</span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> b;		</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> c;			</span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> d;</span></div><div class="line"><span class="javascript">			<span class="comment">//console.log	(a);  //  报错;			</span></span></div><div class="line"><span class="undefined">			 b=5;</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(b);   <span class="comment">//  5   	</span></span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(c);   <span class="comment">//undefined</span></span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(d);  <span class="comment">// undefined			</span></span></div><div class="line"><span class="undefined">			 d=5;  </span></div><div class="line"><span class="javascript">			 <span class="built_in">console</span>.log(d);			</span></div><div class="line"><span class="javascript">			<span class="comment">//  声明变量提升机制																</span></span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> a=<span class="string">"我是全局中的a"</span>;			</span></div><div class="line"><span class="javascript">			<span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">				<span class="built_in">console</span>.log(a);  <span class="comment">//   </span></span></div><div class="line"><span class="javascript">				<span class="keyword">var</span> a=<span class="string">"我是局部中的a"</span>;</span></div><div class="line"><span class="javascript">				<span class="built_in">console</span>.log(a);   <span class="comment">//  </span></span></div><div class="line"><span class="undefined">			&#125;		</span></div><div class="line"><span class="undefined">			fn();			</span></div><div class="line"><span class="javascript">			<span class="built_in">console</span>.log(a);     </span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>	</div><div class="line">作用域</div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">			<span class="keyword">var</span> a=<span class="number">5</span>;				</span></div><div class="line"><span class="javascript">			<span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">				<span class="keyword">var</span> b=<span class="string">"我是fn中的b"</span>;</span></div><div class="line"><span class="javascript">				<span class="built_in">console</span>.log(<span class="string">"当前作用域没有a,全局作用域中有啊"</span>+a);</span></div><div class="line"><span class="undefined">			&#125;		</span></div><div class="line"><span class="undefined">			fn();</span></div><div class="line"><span class="javascript">            <span class="built_in">console</span>.log(b);						</span></div><div class="line"><span class="undefined">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 
       
 
