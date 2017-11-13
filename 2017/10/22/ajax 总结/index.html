@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/22/ajax 总结/index.html">
 <meta property="og:site_name" content="喵喵喵？？">
 <meta property="og:description" content="ajax 定义: ajax 就是前端和后端进行交流的一门js技术 作用:  实现不刷新页面的情况下,更新局部页面   分类(ajax 是前端和后端交流的技术,)  同域请求:  浏览器有同源策略(协议,域名,端口,)一致,就是同源, 为什么有同源策略? 为了用户安全;   常规的ajax:   初始化一个ajax对象 var xhr= new XMLHttpRequest();      创建连接">
-<meta property="og:updated_time" content="2017-10-26T09:42:27.197Z">
+<meta property="og:updated_time" content="2017-11-13T07:10:03.217Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax">
 <meta name="twitter:description" content="ajax 定义: ajax 就是前端和后端进行交流的一门js技术 作用:  实现不刷新页面的情况下,更新局部页面   分类(ajax 是前端和后端交流的技术,)  同域请求:  浏览器有同源策略(协议,域名,端口,)一致,就是同源, 为什么有同源策略? 为了用户安全;   常规的ajax:   初始化一个ajax对象 var xhr= new XMLHttpRequest();      创建连接">
@@ -62,7 +62,7 @@
 			<img src="/img/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">张洪基</a></h1>
+		  <h1 class="header-author"><a href="">老E（小鹅）</a></h1>
 		</hgroup>
 		
 
@@ -120,7 +120,7 @@
 				<img src="/img/avatar.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">张洪基</h1>
+			  <h1 class="header-author js-header-author">老E（小鹅）</h1>
 			</hgroup>
 			
 			
@@ -226,19 +226,22 @@
 </ol>
 </li>
 <li><ol>
-<li>等待并拿到后台给我们的数据<ul>
+<li><p>等待并拿到后台给我们的数据</p>
+<ul>
 <li>等待并且拿到后台给咱们的数据;</li>
 <li>通过检测xhr(ajax对象)的状态 来获取数据</li>
 <li>xhr.readyState=4 ,说明了后台已经开始返回数据,</li>
 <li>xhr.status==200  说明了 所有数据都传输完毕了</li>
-<li>xhr.responseText 通过这个方法拿到数据<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">xhr.onreadystatechange=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(xhr.readyState==<span class="number">4</span>  &amp;&amp; xhr.status==<span class="number">200</span> )&#123;</div><div class="line">                <span class="keyword">var</span> data= xhr.responseText</div><div class="line"></div><div class="line">                       <span class="comment">//根据需求 操作数据</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<li>xhr.responseText 通过这个方法拿到数据<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">xhr.onreadystatechange=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(xhr.readyState==<span class="number">4</span>  &amp;&amp; xhr.status==<span class="number">200</span> )&#123;</div><div class="line">                <span class="keyword">var</span> data= xhr.responseText</div><div class="line"></div><div class="line">                       <span class="comment">//根据需求 操作数据</span></div><div class="line">        &#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<p>}</p>
+<a id="more"></a>
 </li>
 </ol>
+<p>```</p>
 </li>
-<li><p>请求方式 :</p>
-<ul>
+<li>请求方式 :<ul>
 <li>get 请求:<ul>
 <li>数据都在地址栏中</li>
 <li>数据大小有限制</li>
@@ -476,7 +479,7 @@ window.YiliaChangyanWrap = function() {
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 张洪基
+    		&copy; 2017 老E（小鹅）
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
